@@ -8,7 +8,8 @@
 }
 
 :root {
-  --app-primary: rgba(35, 35, 35, 1);
+  --app-primary: #6B46C1;
+  --app-secondary: #F59E0B;
 }
 
 :root {
