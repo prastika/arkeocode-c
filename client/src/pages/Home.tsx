@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { contactFormSchema, type ContactForm, type Stat, type Service, type Product, type Benefit } from "@shared/schema";
 import { Monitor, Smartphone, Database, Cpu, Cloud, Brain, Rocket, CheckSquare, ArrowRight } from "lucide-react";
+import logoImage from "@assets/arkeocode_1759877227427.png";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -176,10 +177,7 @@ export default function Home() {
       <header className="bg-[#4927F5] text-white py-4 px-6 sticky top-0 z-50" data-testid="header">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2" data-testid="logo">
-            <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-              <span className="text-[#4927F5] font-bold">A</span>
-            </div>
-            <span className="font-bold text-xl">Arkeocode</span>
+            <img src={logoImage} alt="Arkeocode" className="h-10 w-auto" />
           </div>
           
           <nav className="hidden md:flex items-center gap-8" data-testid="nav-menu">
@@ -404,10 +402,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <div className="flex items-center gap-2 mb-6" data-testid="footer-logo">
-                <div className="w-8 h-8 bg-[#4927F5] rounded flex items-center justify-center">
-                  <span className="text-white font-bold">A</span>
-                </div>
-                <span className="font-bold text-xl text-[#4927F5]">Arkeocode</span>
+                <img src={logoImage} alt="Arkeocode" className="h-10 w-auto" />
               </div>
               
               <Form {...form}>
