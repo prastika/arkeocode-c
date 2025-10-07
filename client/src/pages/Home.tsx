@@ -304,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-[#2563EB]" data-testid="section-benefits">
+      <section className="py-20 px-6 bg-[#6B46C1]" data-testid="section-benefits">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12" data-testid="heading-benefits">
             Benefits
@@ -318,7 +318,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-3" data-testid={`benefit-title-${benefit.id}`}>
                   {benefit.title}
                 </h3>
-                <p className="text-blue-100" data-testid={`benefit-description-${benefit.id}`}>
+                <p className="text-purple-100" data-testid={`benefit-description-${benefit.id}`}>
                   {benefit.description}
                 </p>
               </div>
@@ -373,6 +373,9 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-[#6B46C1] text-center mb-12" data-testid="heading-clients">
             Clients
           </h2>
+          <p className="text-gray-600 text-center max-w-3xl mx-auto" data-testid="text-clients-description">
+            We have worked with amazing clients and helped them transform their business through digital solutions.
+          </p>
         </div>
       </section>
 
