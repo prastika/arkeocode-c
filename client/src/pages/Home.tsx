@@ -405,51 +405,21 @@ export default function Home() {
                 <img src={logoImage} alt="Arkeocode" className="h-10 w-auto" />
               </div>
               
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" data-testid="form-contact">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your email" 
-                            {...field} 
-                            className="bg-white"
-                            data-testid="input-email"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button 
-                    type="submit" 
-                    className="bg-[#4927F5] hover:bg-[#3817D5] text-white w-full md:w-auto"
-                    disabled={contactMutation.isPending}
-                    data-testid="button-submit"
-                  >
-                    {contactMutation.isPending ? "Submitting..." : "Submit"}
-                  </Button>
-                </form>
-              </Form>
+              <p className="text-gray-600 mb-6" data-testid="text-footer-description">
+                Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI.
+              </p>
             </div>
 
-            <div className="space-y-4" data-testid="footer-contact">
-              <div>
-                <h3 className="font-bold mb-2" data-testid="text-contact-heading">CONTACT</h3>
-                <p className="text-gray-600" data-testid="text-contact-info">arkeocodeindonesia@gmail.com</p>
-              </div>
-              
-              <div>
-                <h3 className="font-bold mb-2" data-testid="text-address-heading">ADDRESS</h3>
-                <p className="text-gray-600" data-testid="text-address">
-                  Graha Raya<br />
-                  RT.03/RW.05, Tangsel,<br />
-                  Banten, Indonesia
-                </p>
-              </div>
+            <div data-testid="footer-services">
+              <h3 className="font-bold mb-4 text-lg" data-testid="text-services-heading">Our Services:</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li data-testid="service-item-1">• Trossen Telling via Drone (Drone-Based Yield Forecasting)</li>
+                <li data-testid="service-item-2">• Oil Palm Productivity Analysis</li>
+                <li data-testid="service-item-3">• Land Cleanliness Monitoring (Weed and Debris Management)</li>
+                <li data-testid="service-item-4">• Plant Spacing Optimization</li>
+                <li data-testid="service-item-5">• Professional Field Surveys (Ground and Aerial Data Collection)</li>
+                <li data-testid="service-item-6">• Integrated Survey Data Management</li>
+              </ul>
             </div>
           </div>
 
