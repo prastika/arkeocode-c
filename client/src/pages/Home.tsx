@@ -173,11 +173,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-[#6B46C1] text-white py-4 px-6 sticky top-0 z-50" data-testid="header">
+      <header className="bg-[#4927F5] text-white py-4 px-6 sticky top-0 z-50" data-testid="header">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2" data-testid="logo">
             <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-              <span className="text-[#6B46C1] font-bold">A</span>
+              <span className="text-[#4927F5] font-bold">A</span>
             </div>
             <span className="font-bold text-xl">Arkeocode</span>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
             <a href="#news" className="hover:opacity-80 transition-opacity" data-testid="link-news">News</a>
           </nav>
           
-          <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white" data-testid="button-contact-header">
+          <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white" data-testid="button-contact-header">
             Contact Us
           </Button>
         </div>
@@ -207,7 +207,7 @@ export default function Home() {
               Arkeocode specializes in creating cutting-edge IT solutions that transform businesses. 
               We develop innovative software, web, and mobile applications tailored to meet your unique needs.
             </p>
-            <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white px-8 py-6 text-lg" data-testid="button-learn-more">
+            <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg" data-testid="button-learn-more">
               Learn More
             </Button>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
       {/* Company Profile Section */}
       <section className="py-20 px-6 bg-white" data-testid="section-company-profile">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#6B46C1] text-center mb-8" data-testid="heading-company-profile">
+          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-8" data-testid="heading-company-profile">
             Company Profile
           </h2>
           <p className="text-gray-600 text-center max-w-3xl mx-auto" data-testid="text-company-description">
@@ -232,13 +232,13 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 px-6 bg-gray-50" data-testid="section-stats">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#F59E0B] mb-12" data-testid="heading-stats">
+          <h2 className="text-3xl font-bold text-[#FF7D04] mb-12" data-testid="heading-stats">
             We're in Numbers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center" data-testid={`stat-${index}`}>
-                <div className="text-5xl font-bold text-[#6B46C1] mb-2" data-testid={`stat-number-${index}`}>
+                <div className="text-5xl font-bold text-[#4927F5] mb-2" data-testid={`stat-number-${index}`}>
                   {stat.number}
                 </div>
                 <div className="text-gray-600" data-testid={`stat-label-${index}`}>
@@ -254,7 +254,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-gray-100" data-testid="section-vmv">
         <div className="max-w-7xl mx-auto space-y-12">
           <div data-testid="vision-block">
-            <h2 className="text-3xl font-bold text-[#6B46C1] mb-4" data-testid="heading-vision">Vision</h2>
+            <h2 className="text-3xl font-bold text-[#4927F5] mb-4" data-testid="heading-vision">Vision</h2>
             <p className="text-gray-600" data-testid="text-vision">
               Utilizing a concept that builds products and digital solutions for our clients and society to be better with continuous 
               improvement and innovation that is useful and easy to use.
@@ -262,14 +262,14 @@ export default function Home() {
           </div>
 
           <div data-testid="mission-block">
-            <h2 className="text-3xl font-bold text-[#6B46C1] mb-4" data-testid="heading-mission">Mission</h2>
+            <h2 className="text-3xl font-bold text-[#4927F5] mb-4" data-testid="heading-mission">Mission</h2>
             <p className="text-gray-600" data-testid="text-mission">
               Build products for users that are easy to build and help solve business tasks and complex data and labor.
             </p>
           </div>
 
           <div data-testid="value-block">
-            <h2 className="text-3xl font-bold text-[#6B46C1] mb-4" data-testid="heading-value">Value</h2>
+            <h2 className="text-3xl font-bold text-[#4927F5] mb-4" data-testid="heading-value">Value</h2>
             <p className="text-gray-600" data-testid="text-value">
               Conduct discovery for what will actually be useful to users from how we build and we create for products to help.
             </p>
@@ -280,14 +280,14 @@ export default function Home() {
       {/* Services Section */}
       <section id="service" className="py-20 px-6 bg-white" data-testid="section-services">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#6B46C1] text-center mb-12" data-testid="heading-services">
+          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-services">
             Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card key={service.id} className="border-2 hover:shadow-lg transition-shadow" data-testid={`service-card-${service.id}`}>
                 <CardContent className="p-6">
-                  <div className="text-[#6B46C1] mb-4" data-testid={`service-icon-${service.id}`}>
+                  <div className="text-[#4927F5] mb-4" data-testid={`service-icon-${service.id}`}>
                     {getServiceIcon(service.icon)}
                   </div>
                   <h3 className="text-xl font-bold mb-3" data-testid={`service-title-${service.id}`}>
@@ -304,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-[#6B46C1]" data-testid="section-benefits">
+      <section className="py-20 px-6 bg-[#4927F5]" data-testid="section-benefits">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12" data-testid="heading-benefits">
             Benefits
@@ -330,7 +330,7 @@ export default function Home() {
       {/* Expert Section */}
       <section className="py-20 px-6 bg-gray-50" data-testid="section-expert">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#6B46C1] mb-6" data-testid="heading-expert">Expert</h2>
+          <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-expert">Expert</h2>
           <p className="text-gray-600 max-w-3xl" data-testid="text-expert">
             We have a team of experts skilled in real work at several big tech companies who are very, they can build carefully.
           </p>
@@ -340,7 +340,7 @@ export default function Home() {
       {/* Products Section */}
       <section className="py-20 px-6 bg-white" data-testid="section-products">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#6B46C1] text-center mb-12" data-testid="heading-products">
+          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-products">
             Products
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -356,7 +356,7 @@ export default function Home() {
                   <p className="text-gray-600 mb-4" data-testid={`product-description-${product.id}`}>
                     {product.description}
                   </p>
-                  <Button className="bg-[#6B46C1] hover:bg-[#5B35B1] text-white w-full" data-testid={`button-learn-more-${product.id}`}>
+                  <Button className="bg-[#4927F5] hover:bg-[#3817D5] text-white w-full" data-testid={`button-learn-more-${product.id}`}>
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -370,7 +370,7 @@ export default function Home() {
       {/* Clients Section */}
       <section className="py-20 px-6 bg-gray-50" data-testid="section-clients">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#6B46C1] text-center mb-12" data-testid="heading-clients">
+          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-clients">
             Clients
           </h2>
           <p className="text-gray-600 text-center max-w-3xl mx-auto" data-testid="text-clients-description">
@@ -382,7 +382,7 @@ export default function Home() {
       {/* Join Team Section */}
       <section className="py-20 px-6 bg-white" data-testid="section-join-team">
         <div className="max-w-7xl mx-auto">
-          <Card className="bg-[#6B46C1] text-white p-12 text-center" data-testid="card-join-team">
+          <Card className="bg-[#4927F5] text-white p-12 text-center" data-testid="card-join-team">
             <CardContent>
               <h2 className="text-4xl font-bold mb-4" data-testid="heading-join-team">
                 Be The Part<br />of Arkeocode Team
@@ -390,7 +390,7 @@ export default function Home() {
               <p className="mb-8 text-purple-100" data-testid="text-join-description">
                 We need the best person from you and we see potential too, let's join us.
               </p>
-              <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white px-8 py-6 text-lg" data-testid="button-contact-now">
+              <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg" data-testid="button-contact-now">
                 Contact Now
               </Button>
             </CardContent>
@@ -404,10 +404,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <div className="flex items-center gap-2 mb-6" data-testid="footer-logo">
-                <div className="w-8 h-8 bg-[#6B46C1] rounded flex items-center justify-center">
+                <div className="w-8 h-8 bg-[#4927F5] rounded flex items-center justify-center">
                   <span className="text-white font-bold">A</span>
                 </div>
-                <span className="font-bold text-xl text-[#6B46C1]">Arkeocode</span>
+                <span className="font-bold text-xl text-[#4927F5]">Arkeocode</span>
               </div>
               
               <Form {...form}>
@@ -431,7 +431,7 @@ export default function Home() {
                   />
                   <Button 
                     type="submit" 
-                    className="bg-[#6B46C1] hover:bg-[#5B35B1] text-white w-full md:w-auto"
+                    className="bg-[#4927F5] hover:bg-[#3817D5] text-white w-full md:w-auto"
                     disabled={contactMutation.isPending}
                     data-testid="button-submit"
                   >
