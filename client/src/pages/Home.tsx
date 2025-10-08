@@ -7,6 +7,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
 import { contactFormSchema, type ContactForm, type Stat, type Service, type Product, type Benefit } from "@shared/schema";
 import { Monitor, Smartphone, Database, Cpu, Cloud, Brain, Rocket, CheckSquare, ArrowRight } from "lucide-react";
 import logoImage from "@assets/Group 1_1759888320639.png";
+import footerLogoImage from "@assets/Group 2_1759888453960.png";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -399,27 +400,47 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-100 py-12 px-6" data-testid="footer">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-6" data-testid="footer-logo">
-                <img src={logoImage} alt="Arkeocode" className="h-10 w-auto" />
+              <div className="mb-4" data-testid="footer-logo">
+                <img src={footerLogoImage} alt="Arkeocode" className="h-12 w-auto" />
               </div>
               
-              <p className="text-gray-600 mb-6" data-testid="text-footer-description">
+              <p className="text-gray-600 text-sm" data-testid="text-footer-description">
                 Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI.
               </p>
             </div>
 
             <div data-testid="footer-services">
-              <h3 className="font-bold mb-4 text-lg" data-testid="text-services-heading">Our Services:</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li data-testid="service-item-1">• Trossen Telling via Drone (Drone-Based Yield Forecasting)</li>
-                <li data-testid="service-item-2">• Oil Palm Productivity Analysis</li>
-                <li data-testid="service-item-3">• Land Cleanliness Monitoring (Weed and Debris Management)</li>
-                <li data-testid="service-item-4">• Plant Spacing Optimization</li>
-                <li data-testid="service-item-5">• Professional Field Surveys (Ground and Aerial Data Collection)</li>
-                <li data-testid="service-item-6">• Integrated Survey Data Management</li>
+              <h3 className="font-bold mb-4" data-testid="text-services-heading">Our Services:</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li data-testid="service-item-1">Trossen Telling via Drone (Drone-Based Yield Forecasting)</li>
+                <li data-testid="service-item-2">Oil Palm Productivity Analysis</li>
+                <li data-testid="service-item-3">Land Cleanliness Monitoring (Weed and Debris Management)</li>
+                <li data-testid="service-item-4">Plant Spacing Optimization</li>
+                <li data-testid="service-item-5">Professional Field Surveys (Ground and Aerial Data Collection)</li>
+                <li data-testid="service-item-6">Integrated Survey Data Management</li>
               </ul>
+            </div>
+
+            <div data-testid="footer-links">
+              <h3 className="font-bold mb-4" data-testid="text-links-heading">Tautan Cepat</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li><a href="#about" className="hover:text-[#4927F5] transition-colors" data-testid="link-about-us">About Us</a></li>
+                <li><a href="#blog" className="hover:text-[#4927F5] transition-colors" data-testid="link-blog">Blog & Insights</a></li>
+                <li><a href="#demos" className="hover:text-[#4927F5] transition-colors" data-testid="link-demos">Technology Demos</a></li>
+                <li><a href="#packages" className="hover:text-[#4927F5] transition-colors" data-testid="link-packages">Service Packages</a></li>
+                <li><a href="#team" className="hover:text-[#4927F5] transition-colors" data-testid="link-team">Founding Team</a></li>
+                <li><a href="#contact" className="hover:text-[#4927F5] transition-colors" data-testid="link-contact">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div data-testid="footer-address">
+              <p className="text-gray-600 text-sm" data-testid="text-address">
+                Permata Regency, Jl. H. Kelik<br />
+                RT. 11/RW. 06 Kel. Srengseng<br />
+                Kec. Kembangan, DKI Jakarta 11630
+              </p>
             </div>
           </div>
 
