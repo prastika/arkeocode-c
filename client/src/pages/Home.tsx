@@ -522,36 +522,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="py-20 px-6 bg-white" data-testid="section-products">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-products">
-            Products
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow" data-testid={`product-card-${product.id}`}>
-                <div className="aspect-video bg-gray-200" data-testid={`product-image-${product.id}`}>
-                  <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3" data-testid={`product-title-${product.id}`}>
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4" data-testid={`product-description-${product.id}`}>
-                    {product.description}
-                  </p>
-                  <Button className="bg-[#4927F5] hover:bg-[#3817D5] text-white w-full" data-testid={`button-learn-more-${product.id}`}>
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Clients Section */}
       <section className="py-20 px-6 bg-gray-50" data-testid="section-clients">
         <div className="max-w-7xl mx-auto">
