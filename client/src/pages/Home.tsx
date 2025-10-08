@@ -214,18 +214,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Company Profile Section */}
-      <section className="py-20 px-6 bg-white" data-testid="section-company-profile">
+      {/* Tech Demo Section */}
+      <section className="py-20 px-6 bg-white" data-testid="section-tech-demo">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-8" data-testid="heading-company-profile">
-            Company Profile
-          </h2>
-          <p className="text-gray-600 text-center max-w-3xl mx-auto" data-testid="text-company-description">
-            We always look at it as if we are a customer, what do we want from a service provider and then we implement it with discipline. 
-            We do various tests from manual and automated testing methods to ensure applications that can be accepted by customers and 
-            end users. We don't hesitate to share knowledge within the team when there are new findings from tools and other things we 
-            implement both internally and externally so that we can continue to develop and innovate.
-          </p>
+          <div className="text-center mb-12">
+            <span className="inline-block px-6 py-2 bg-[#D639D4]/10 text-[#D639D4] rounded-full text-sm font-medium mb-6" data-testid="badge-demo">
+              Demo Teknologi
+            </span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="heading-tech-demo">
+              Lihat Teknologi Drone Kami Beraksi
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-tech-demo-description">
+              Saksikan bagaimana drone kami melakukan pemetaan perkebunan kelapa sawit dengan presisi tinggi dan menghasilkan data analitik yang akurat.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto mb-12">
+            <div className="relative bg-black rounded-lg overflow-hidden aspect-video" data-testid="video-container">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <button className="w-20 h-20 rounded-full bg-[#4CAF50] hover:bg-[#45A049] flex items-center justify-center transition-colors" data-testid="button-play-video">
+                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <h3 className="text-white font-bold mb-1" data-testid="video-title">Survei Drone Perkebunan Kelapa Sawit</h3>
+                <p className="text-white/80 text-sm" data-testid="video-description">Durasi: 1:20 | Menampilkan proses survei dari take-off hingga analisis data AI</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#E8F5E9] rounded-lg p-12 text-center" data-testid="demo-cta">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="heading-demo-cta">
+              Ingin Melihat Demo Langsung di Perkebunan Anda?
+            </h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto" data-testid="text-demo-cta">
+              Jadwalkan demo gratis dan lihat sendiri bagaimana teknologi kami dapat mengoptimalkan perkebunan Anda.
+            </p>
+            <Button className="bg-[#4CAF50] hover:bg-[#45A049] text-white px-8 py-6 text-lg" data-testid="button-schedule-demo">
+              Jadwalkan Demo Gratis →
+            </Button>
+          </div>
         </div>
       </section>
 
