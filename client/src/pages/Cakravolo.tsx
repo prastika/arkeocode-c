@@ -32,12 +32,9 @@ export default function Cakravolo() {
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-[#4927F5] to-[#6B46C1]" data-testid="section-hero">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6" data-testid="heading-cakravolo">
+          <div className="flex justify-center" data-testid="heading-cakravolo">
             <img src={cakravoloLogo} alt="Cakravolo" className="h-32 w-auto" />
           </div>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto" data-testid="text-cakravolo-intro">
-            Advanced AI-Powered Precision Agriculture Platform
-          </p>
         </div>
       </section>
 
