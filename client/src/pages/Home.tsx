@@ -198,15 +198,11 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="bg-gray-100 py-20 px-6" data-testid="section-hero">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6" data-testid="heading-hero">
-              Tech Company Build Product to Transform Existing Service to Digitalize World
-            </h1>
-            <p className="text-gray-600 text-lg mb-8" data-testid="text-hero-description">
-              Arkeocode specializes in creating cutting-edge IT solutions that transform businesses. 
-              We develop innovative software, web, and mobile applications tailored to meet your unique needs.
+          <div className="max-w-4xl">
+            <p className="text-gray-600 text-lg leading-relaxed" data-testid="text-hero-description">
+              Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI. We replace slow, risky manual surveys with autonomous census missions that identify and analyze every plant and potential yield indicator in real-time. Our data-driven service delivers 100% accurate information for precise yield forecasting, fertilizer optimization, and targeted pest intervention, empowering plantation managers to make smarter strategic decisions for maximum efficiency and profitability.
             </p>
-            <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg" data-testid="button-learn-more">
+            <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg mt-8" data-testid="button-learn-more">
               Learn More
             </Button>
           </div>
