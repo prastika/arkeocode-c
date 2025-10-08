@@ -30,7 +30,7 @@ export default function Cakravolo() {
       </header>
 
       {/* Hero Section */}
-      <section className="h-[600px] px-6 bg-gradient-to-br from-[#4927F5] to-[#6B46C1] flex items-center justify-center" data-testid="section-hero">
+      <section className="h-[210px] px-6 bg-gradient-to-br from-[#4927F5] to-[#6B46C1] flex items-center justify-center" data-testid="section-hero">
         <div className="w-full h-full flex items-center justify-center" style={{ paddingTop: '20%', paddingBottom: '20%' }}>
           <img src={cakravoloLogo} alt="Cakravolo" className="h-full w-auto object-contain" data-testid="heading-cakravolo" />
         </div>
