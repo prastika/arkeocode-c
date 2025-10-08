@@ -225,7 +225,7 @@ export default function Home() {
               Lihat Teknologi Drone Kami Beraksi
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-tech-demo-description">
-              Saksikan bagaimana drone kami melakukan pemetaan perkebunan kelapa sawit dengan presisi tinggi dan menghasilkan data analitik yang akurat.
+              Witness firsthand how our specialized drones conduct high-precision mapping of palm oil estates, generating accurate and actionable analytic data.
             </p>
           </div>
 
@@ -247,13 +247,13 @@ export default function Home() {
 
           <div className="bg-[#E8F5E9] rounded-lg p-12 text-center" data-testid="demo-cta">
             <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="heading-demo-cta">
-              Ingin Melihat Demo Langsung di Perkebunan Anda?
+              Ready for a Live Demonstration on Your Estate?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto" data-testid="text-demo-cta">
-              Jadwalkan demo gratis dan lihat sendiri bagaimana teknologi kami dapat mengoptimalkan perkebunan Anda.
+              Schedule a free demo and see for yourself how our technology can optimize and transform your plantation management.
             </p>
             <Button className="bg-[#4CAF50] hover:bg-[#45A049] text-white px-8 py-6 text-lg" data-testid="button-schedule-demo">
-              Jadwalkan Demo Gratis →
+              See the Precision →
             </Button>
           </div>
         </div>
