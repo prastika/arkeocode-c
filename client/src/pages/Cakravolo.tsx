@@ -36,55 +36,16 @@ export default function Cakravolo() {
         </div>
       </section>
 
-      {/* Workflow Section */}
-      <section className="py-20 px-6 bg-white" data-testid="section-workflow">
+      {/* New Section */}
+      <section className="py-20 px-6 bg-white" data-testid="section-new">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-workflow">
-              Workflow
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-new-section">
+              Section Title
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto mb-12" data-testid="text-workflow-intro">
-              This automated process replaces manual census methods, providing rapid, accurate, and real-time yield data.
+            <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-new-section">
+              Add your content here.
             </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse" data-testid="table-workflow">
-              <thead>
-                <tr className="bg-[#4927F5] text-white">
-                  <th className="border border-gray-300 px-6 py-4 text-left font-bold" data-testid="th-step">Step</th>
-                  <th className="border border-gray-300 px-6 py-4 text-left font-bold" data-testid="th-action">Action</th>
-                  <th className="border border-gray-300 px-6 py-4 text-left font-bold" data-testid="th-technology">Technology/Result</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="hover:bg-gray-50" data-testid="row-step-1">
-                  <td className="border border-gray-300 px-6 py-4 font-semibold text-[#4927F5]">1. Flight Deployment</td>
-                  <td className="border border-gray-300 px-6 py-4">Automated deployment of intelligent UAVs (Drones) across the plantation.</td>
-                  <td className="border border-gray-300 px-6 py-4">Automation and Obstacle Avoidance ensures efficient, safe, and complete coverage of the estate.</td>
-                </tr>
-                <tr className="hover:bg-gray-50" data-testid="row-step-2">
-                  <td className="border border-gray-300 px-6 py-4 font-semibold text-[#4927F5]">2. Real-Time Sensing</td>
-                  <td className="border border-gray-300 px-6 py-4">The drone executes a precision flight path while its cameras capture high-resolution imagery.</td>
-                  <td className="border border-gray-300 px-6 py-4">AI Computer Vision instantly identifies and counts fresh fruit bunches (FFB) and flowers in real time.</td>
-                </tr>
-                <tr className="hover:bg-gray-50" data-testid="row-step-3">
-                  <td className="border border-gray-300 px-6 py-4 font-semibold text-[#4927F5]">3. Data Transmission</td>
-                  <td className="border border-gray-300 px-6 py-4">Data is immediately transferred from the drone to the processing center during the flight.</td>
-                  <td className="border border-gray-300 px-6 py-4">Real-time Data Connection to Server facilitates instant data processing without delays.</td>
-                </tr>
-                <tr className="hover:bg-gray-50" data-testid="row-step-4">
-                  <td className="border border-gray-300 px-6 py-4 font-semibold text-[#4927F5]">4. AI Validation</td>
-                  <td className="border border-gray-300 px-6 py-4">Raw count data is run through rigorous algorithms on the server.</td>
-                  <td className="border border-gray-300 px-6 py-4">Digital Due Diligence and AI-based analysis validate the bunch count, ensuring high accuracy.</td>
-                </tr>
-                <tr className="hover:bg-gray-50" data-testid="row-step-5">
-                  <td className="border border-gray-300 px-6 py-4 font-semibold text-[#4927F5]">5. Reporting & Tracking</td>
-                  <td className="border border-gray-300 px-6 py-4">The processed and validated data is immediately visualized for the client.</td>
-                  <td className="border border-gray-300 px-6 py-4">Real-time Dashboard allows users to track the status of the in-field bunch census and access the final yield forecast.</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
