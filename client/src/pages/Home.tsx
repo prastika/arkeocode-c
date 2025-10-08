@@ -262,9 +262,6 @@ export default function Home() {
             <span className="inline-block px-6 py-2 bg-[#D639D4]/10 text-[#D639D4] rounded-full text-sm font-medium mb-6" data-testid="badge-core-services">
               Layanan Utama
             </span>
-            <h2 className="text-4xl font-bold text-gray-900" data-testid="heading-core-services">
-              Core Services
-            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
