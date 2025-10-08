@@ -184,10 +184,9 @@ export default function Home() {
           
           <nav className="hidden md:flex items-center gap-8" data-testid="nav-menu">
             <a href="#home" className="hover:opacity-80 transition-opacity" data-testid="link-home">Home</a>
-            <a href="#about" className="hover:opacity-80 transition-opacity" data-testid="link-about">About</a>
+            <a href="#cakravolo" className="hover:opacity-80 transition-opacity" data-testid="link-cakravolo">Cakravolo</a>
             <a href="#service" className="hover:opacity-80 transition-opacity" data-testid="link-service">Service</a>
-            <a href="#career" className="hover:opacity-80 transition-opacity" data-testid="link-career">Career</a>
-            <a href="#news" className="hover:opacity-80 transition-opacity" data-testid="link-news">News</a>
+            <a href="#article" className="hover:opacity-80 transition-opacity" data-testid="link-article">Article</a>
           </nav>
           
           <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white" data-testid="button-contact-header">
