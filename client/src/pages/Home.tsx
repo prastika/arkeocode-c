@@ -244,7 +244,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-[#E8F5E9] rounded-lg p-12 text-center" data-testid="demo-cta">
+          <div className="bg-[#E2E8F6] rounded-lg p-12 text-center" data-testid="demo-cta">
             <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="heading-demo-cta">
               Ready for a Live Demonstration on Your Estate?
             </h3>
