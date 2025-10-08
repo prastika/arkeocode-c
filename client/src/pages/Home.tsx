@@ -251,7 +251,7 @@ export default function Home() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto" data-testid="text-demo-cta">
               Schedule a free demo and see for yourself how our technology can optimize and transform your plantation management.
             </p>
-            <Button className="bg-[#4CAF50] hover:bg-[#45A049] text-white px-8 py-6 text-lg" data-testid="button-schedule-demo">
+            <Button className="bg-[#D639D4] hover:bg-[#C020C4] text-white px-8 py-6 text-lg" data-testid="button-schedule-demo">
               See the Precision →
             </Button>
           </div>
