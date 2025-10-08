@@ -68,7 +68,7 @@ export default function Cakravolo() {
                   <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-1">TAHAP 1</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-1">
-                  Survei oleh Tenaga Profesional Tersertifikasi
+                  Flight Deployment
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-1">
                   Automated deployment of intelligent UAVs (Drones) across the plantation. Automation and Obstacle Avoidance ensures efficient, safe, and complete coverage of the estate.
