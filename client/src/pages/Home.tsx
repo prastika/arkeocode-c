@@ -176,7 +176,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-[#4927F5] text-white py-4 px-6 sticky top-0 z-50" data-testid="header">
+      <header className="bg-[#D639D4] text-white py-4 px-6 sticky top-0 z-50" data-testid="header">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2" data-testid="logo">
             <img src={logoImage} alt="Arkeocode" className="h-10 w-auto" />
@@ -273,7 +273,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Comprehensive Monitoring Card */}
             <Card className="overflow-hidden border-0 shadow-lg" data-testid="card-comprehensive-monitoring">
-              <div className="h-32 bg-gradient-to-br from-[#4927F5] to-[#6B46C1] relative flex items-center justify-center">
+              <div className="h-32 bg-gradient-to-br from-[#D639D4] to-[#B830C4] relative flex items-center justify-center">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
@@ -289,27 +289,27 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-start" data-testid="monitoring-feature-1">
-                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span className="text-[#D639D4] mr-2">•</span>
                     <span>High-resolution drone mapping (250–5,000 Ha coverage)</span>
                   </li>
                   <li className="flex items-start" data-testid="monitoring-feature-2">
-                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span className="text-[#D639D4] mr-2">•</span>
                     <span>Individual spectral analysis (NDVI)</span>
                   </li>
                   <li className="flex items-start" data-testid="monitoring-feature-3">
-                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span className="text-[#D639D4] mr-2">•</span>
                     <span>Crop health classification (Normal, Young, Abnormal)</span>
                   </li>
                   <li className="flex items-start" data-testid="monitoring-feature-4">
-                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span className="text-[#D639D4] mr-2">•</span>
                     <span>Field cleanliness evaluation (Weed and debris management)</span>
                   </li>
                   <li className="flex items-start" data-testid="monitoring-feature-5">
-                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span className="text-[#D639D4] mr-2">•</span>
                     <span>Harvest area estimation & forecasting</span>
                   </li>
                   <li className="flex items-start" data-testid="monitoring-feature-6">
-                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span className="text-[#D639D4] mr-2">•</span>
                     <span>Digital reports delivered within 48 hours</span>
                   </li>
                 </ul>
@@ -364,7 +364,7 @@ export default function Home() {
       {/* Vision & Mission Section */}
       <section className="py-20 px-6 bg-gray-100" data-testid="section-vmv">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-vision-mission">
+          <h2 className="text-3xl font-bold text-[#D639D4] text-center mb-12" data-testid="heading-vision-mission">
             Our Vision & Mission: Focusing on Drones and Computer Vision
           </h2>
           
@@ -412,14 +412,14 @@ export default function Home() {
       {/* Services Section */}
       <section id="service" className="py-20 px-6 bg-white" data-testid="section-services">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-services">
+          <h2 className="text-4xl font-bold text-[#D639D4] text-center mb-12" data-testid="heading-services">
             Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card key={service.id} className="border-2 hover:shadow-lg transition-shadow" data-testid={`service-card-${service.id}`}>
                 <CardContent className="p-6">
-                  <div className="text-[#4927F5] mb-4" data-testid={`service-icon-${service.id}`}>
+                  <div className="text-[#D639D4] mb-4" data-testid={`service-icon-${service.id}`}>
                     {getServiceIcon(service.icon)}
                   </div>
                   <h3 className="text-xl font-bold mb-3" data-testid={`service-title-${service.id}`}>
@@ -436,7 +436,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-[#4927F5]" data-testid="section-benefits">
+      <section className="py-20 px-6 bg-[#D639D4]" data-testid="section-benefits">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12" data-testid="heading-benefits">
             Benefits
@@ -462,7 +462,7 @@ export default function Home() {
       {/* Expert Section */}
       <section className="py-20 px-6 bg-gray-50" data-testid="section-expert">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-expert">Expert</h2>
+          <h2 className="text-4xl font-bold text-[#D639D4] mb-6" data-testid="heading-expert">Expert</h2>
           <p className="text-gray-600 max-w-3xl" data-testid="text-expert">
             We have a team of experts skilled in real work at several big tech companies who are very, they can build carefully.
           </p>
@@ -472,7 +472,7 @@ export default function Home() {
       {/* Products Section */}
       <section className="py-20 px-6 bg-white" data-testid="section-products">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-products">
+          <h2 className="text-4xl font-bold text-[#D639D4] text-center mb-12" data-testid="heading-products">
             Products
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -488,7 +488,7 @@ export default function Home() {
                   <p className="text-gray-600 mb-4" data-testid={`product-description-${product.id}`}>
                     {product.description}
                   </p>
-                  <Button className="bg-[#4927F5] hover:bg-[#3817D5] text-white w-full" data-testid={`button-learn-more-${product.id}`}>
+                  <Button className="bg-[#D639D4] hover:bg-[#B830C4] text-white w-full" data-testid={`button-learn-more-${product.id}`}>
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -502,7 +502,7 @@ export default function Home() {
       {/* Clients Section */}
       <section className="py-20 px-6 bg-gray-50" data-testid="section-clients">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-clients">
+          <h2 className="text-4xl font-bold text-[#D639D4] text-center mb-12" data-testid="heading-clients">
             Clients
           </h2>
           <p className="text-gray-600 text-center max-w-3xl mx-auto" data-testid="text-clients-description">
@@ -514,7 +514,7 @@ export default function Home() {
       {/* Join Team Section */}
       <section className="py-20 px-6 bg-white" data-testid="section-join-team">
         <div className="max-w-7xl mx-auto">
-          <Card className="bg-[#4927F5] text-white p-12 text-center" data-testid="card-join-team">
+          <Card className="bg-[#D639D4] text-white p-12 text-center" data-testid="card-join-team">
             <CardContent>
               <h2 className="text-4xl font-bold mb-4" data-testid="heading-join-team">
                 Be The Part<br />of Arkeocode Team
