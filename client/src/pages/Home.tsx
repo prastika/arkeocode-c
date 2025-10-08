@@ -280,29 +280,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Vision, Mission, Value Section */}
+      {/* Vision & Mission Section */}
       <section className="py-20 px-6 bg-gray-100" data-testid="section-vmv">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div data-testid="vision-block">
-            <h2 className="text-3xl font-bold text-[#4927F5] mb-4" data-testid="heading-vision">Vision</h2>
-            <p className="text-gray-600" data-testid="text-vision">
-              Utilizing a concept that builds products and digital solutions for our clients and society to be better with continuous 
-              improvement and innovation that is useful and easy to use.
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-vision-mission">
+            Our Vision & Mission: Focusing on Drones and Computer Vision
+          </h2>
+          
+          <div className="space-y-8">
+            <div data-testid="vision-block">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="heading-vision">Our Vision:</h3>
+              <p className="text-gray-600 leading-relaxed" data-testid="text-vision">
+                To be the leader in transforming agriculture by leveraging UAV (Drone) technology combined with Computer Vision-based Artificial Intelligence (AI), enhancing the productivity, efficiency, and sustainability of the agricultural sector in Indonesia and globally.
+              </p>
+            </div>
 
-          <div data-testid="mission-block">
-            <h2 className="text-3xl font-bold text-[#4927F5] mb-4" data-testid="heading-mission">Mission</h2>
-            <p className="text-gray-600" data-testid="text-mission">
-              Build products for users that are easy to build and help solve business tasks and complex data and labor.
-            </p>
-          </div>
-
-          <div data-testid="value-block">
-            <h2 className="text-3xl font-bold text-[#4927F5] mb-4" data-testid="heading-value">Value</h2>
-            <p className="text-gray-600" data-testid="text-value">
-              Conduct discovery for what will actually be useful to users from how we build and we create for products to help.
-            </p>
+            <div data-testid="mission-block">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="heading-mission">Our Mission:</h3>
+              <p className="text-gray-600 mb-4" data-testid="text-mission-intro">
+                With our expertise in remote sensing and image analysis, we are dedicated to:
+              </p>
+              
+              <div className="space-y-4 ml-4">
+                <div data-testid="mission-item-1">
+                  <h4 className="font-bold text-gray-900 mb-2">Developing Precision Census Solutions:</h4>
+                  <p className="text-gray-600">
+                    Utilizing drones and Computer Vision AI to perform highly accurate crop monitoring, including population counting, yield estimation, and disease identification at the individual tree level.
+                  </p>
+                </div>
+                
+                <div data-testid="mission-item-2">
+                  <h4 className="font-bold text-gray-900 mb-2">Creating Real-Time Smart Maps:</h4>
+                  <p className="text-gray-600">
+                    Employing photogrammetry and mapping data from UAVs to generate detailed, real-time Geographic Information System (GIS) Maps, assisting farmers and managers with land planning, crop health zoning, and resource management.
+                  </p>
+                </div>
+                
+                <div data-testid="mission-item-3">
+                  <h4 className="font-bold text-gray-900 mb-2">Driving Data-Driven Agriculture:</h4>
+                  <p className="text-gray-600">
+                    Applying Machine Learning to the collected visual data to predict risks, optimize the dosage of fertilizers and pesticides, and guide targeted, precise field interventions.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
