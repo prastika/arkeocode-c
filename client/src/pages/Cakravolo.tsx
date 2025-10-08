@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logoImage from "@assets/Group 1_1759888320639.png";
 import footerLogoImage from "@assets/Group 2_1759888453960.png";
-import cakravoloLogo from "@assets/cakravolo (500 x 160 px)_1759940692637.png";
+import cakravoloLogo from "@assets/cakravolo (500 x 160 px)_1759940883500.png";
 
 export default function Cakravolo() {
   return (
@@ -31,8 +31,8 @@ export default function Cakravolo() {
 
       {/* Hero Section */}
       <section className="h-[210px] px-6 bg-gradient-to-br from-[#4927F5] to-[#6B46C1] flex items-center justify-center" data-testid="section-hero">
-        <div className="w-full h-full flex items-center justify-center" style={{ paddingTop: '20%', paddingBottom: '20%' }}>
-          <img src={cakravoloLogo} alt="Cakravolo" className="h-full w-auto object-contain" data-testid="heading-cakravolo" />
+        <div className="flex items-center justify-center py-8">
+          <img src={cakravoloLogo} alt="Cakravolo" className="h-auto w-auto max-h-[150px] object-contain" data-testid="heading-cakravolo" />
         </div>
       </section>
 
