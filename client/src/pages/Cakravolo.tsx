@@ -245,7 +245,7 @@ export default function Cakravolo() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-300 text-center text-gray-600 text-sm" data-testid="footer-copyright">
-            Copyright 2025. Akeocode. leading the indonesia futuer of precision agriculture
+            Copyright 2025. Akeocode. leading the indonesia futuere of precision agriculture
           </div>
         </div>
       </footer>
