@@ -8,6 +8,7 @@ import { contactFormSchema, type ContactForm, type Stat, type Service, type Prod
 import { Monitor, Smartphone, Database, Cpu, Cloud, Brain, Rocket, CheckSquare, ArrowRight } from "lucide-react";
 import logoImage from "@assets/Group 1_1759888320639.png";
 import footerLogoImage from "@assets/Group 2_1759888453960.png";
+import heroImage from "@assets/oil palm_1759898697188.jpg";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -196,10 +197,14 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="bg-gray-100 py-20 px-6" data-testid="section-hero">
-        <div className="max-w-7xl mx-auto">
+      <section id="home" className="relative py-20 px-6 overflow-hidden" data-testid="section-hero">
+        <div className="absolute inset-0 z-0">
+          <img src={heroImage} alt="Oil Palm Plantation" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl">
-            <p className="text-gray-600 text-lg leading-relaxed" data-testid="text-hero-description">
+            <p className="text-white text-lg leading-relaxed" data-testid="text-hero-description">
               Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI. We replace slow, risky manual surveys with autonomous census missions that identify and analyze every plant and potential yield indicator in real-time. Our data-driven service delivers 100% accurate information for precise yield forecasting, fertilizer optimization, and targeted pest intervention, empowering plantation managers to make smarter strategic decisions for maximum efficiency and profitability.
             </p>
             <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg mt-8" data-testid="button-learn-more">
