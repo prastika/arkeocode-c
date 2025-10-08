@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logoImage from "@assets/Group 1_1759888320639.png";
 import footerLogoImage from "@assets/Group 2_1759888453960.png";
-import cakravoloLogo from "@assets/3_1759939714477.png";
+import cakravoloLogo from "@assets/cakravolo (500 x 160 px)_1759940692637.png";
 
 export default function Cakravolo() {
   return (
