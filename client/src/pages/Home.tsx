@@ -220,9 +220,6 @@ export default function Home() {
             <span className="inline-block px-6 py-2 bg-[#D639D4]/10 text-[#D639D4] rounded-full text-sm font-medium mb-6" data-testid="badge-demo">
               Technology Demo
             </span>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="heading-tech-demo">
-              Lihat Teknologi Drone Kami Beraksi
-            </h2>
             <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-tech-demo-description">
               Witness firsthand how our specialized drones conduct high-precision mapping of palm oil estates, generating accurate and actionable analytic data.
             </p>
