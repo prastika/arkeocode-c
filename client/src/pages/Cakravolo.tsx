@@ -71,7 +71,7 @@ export default function Cakravolo() {
                   Survei oleh Tenaga Profesional Tersertifikasi
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-1">
-                  Mempergunakan teknologi pemetaan drone terkini untuk memantau perkebangan secara komprehensif. Seluruh proses dilakukan oleh surveyor bersertifikat untuk menjamin integrasi dan detail data terbaik.
+                  Automated deployment of intelligent UAVs (Drones) across the plantation. Automation and Obstacle Avoidance ensures efficient, safe, and complete coverage of the estate.
                 </p>
               </div>
             </div>
