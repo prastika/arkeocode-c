@@ -259,23 +259,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-6 bg-gray-50" data-testid="section-stats">
+      {/* Core Services Section */}
+      <section className="py-20 px-6 bg-gray-50" data-testid="section-core-services">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#FF7D04] mb-12" data-testid="heading-stats">
-            We're in Numbers
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center" data-testid={`stat-${index}`}>
-                <div className="text-5xl font-bold text-[#4927F5] mb-2" data-testid={`stat-number-${index}`}>
-                  {stat.number}
-                </div>
-                <div className="text-gray-600" data-testid={`stat-label-${index}`}>
-                  {stat.label}
+          <div className="text-center mb-12">
+            <span className="inline-block px-6 py-2 bg-[#D639D4]/10 text-[#D639D4] rounded-full text-sm font-medium mb-6" data-testid="badge-core-services">
+              Layanan Utama
+            </span>
+            <h2 className="text-4xl font-bold text-gray-900" data-testid="heading-core-services">
+              Core Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Comprehensive Monitoring Card */}
+            <Card className="overflow-hidden border-0 shadow-lg" data-testid="card-comprehensive-monitoring">
+              <div className="h-32 bg-gradient-to-br from-[#4927F5] to-[#6B46C1] relative flex items-center justify-center">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
                 </div>
               </div>
-            ))}
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="title-comprehensive-monitoring">
+                  Comprehensive Monitoring
+                </h3>
+                <p className="text-gray-600 mb-4" data-testid="subtitle-comprehensive-monitoring">
+                  Periodic Monitoring using Drone & AI for Maximum Productivity
+                </p>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li className="flex items-start" data-testid="monitoring-feature-1">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>High-resolution drone mapping (250–5,000 Ha coverage)</span>
+                  </li>
+                  <li className="flex items-start" data-testid="monitoring-feature-2">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Individual spectral analysis (NDVI)</span>
+                  </li>
+                  <li className="flex items-start" data-testid="monitoring-feature-3">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Crop health classification (Normal, Young, Abnormal)</span>
+                  </li>
+                  <li className="flex items-start" data-testid="monitoring-feature-4">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Field cleanliness evaluation (Weed and debris management)</span>
+                  </li>
+                  <li className="flex items-start" data-testid="monitoring-feature-5">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Harvest area estimation & forecasting</span>
+                  </li>
+                  <li className="flex items-start" data-testid="monitoring-feature-6">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Digital reports delivered within 48 hours</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* AI Drone Trossen Telling Card */}
+            <Card className="overflow-hidden border-0 shadow-lg" data-testid="card-trossen-telling">
+              <div className="h-32 bg-gradient-to-br from-[#FF7D04] to-[#E06D03] relative flex items-center justify-center">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="title-trossen-telling">
+                  AI Drone Trossen Telling (Advanced Yield Forecasting)
+                </h3>
+                <p className="text-gray-600 mb-4" data-testid="subtitle-trossen-telling">
+                  This service revolutionizes the manual census process by utilizing intelligent UAVs:
+                </p>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li className="flex items-start" data-testid="trossen-feature-1">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Automation and Obstacle Avoidance</span>
+                  </li>
+                  <li className="flex items-start" data-testid="trossen-feature-2">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Sensing via AI Computer Vision: Real-time identification and counting of bunches and flowers.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="trossen-feature-3">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Real-time Data Connection to Server: Immediate data transfer for instant processing.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="trossen-feature-4">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Digital Due Diligence for AI-based analysis and validation.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="trossen-feature-5">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Real-time Dashboard for tracking the in-field bunch census status.</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
