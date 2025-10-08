@@ -23,33 +23,15 @@ const stats: Stat[] = [
 const services: Service[] = [
   {
     id: "1",
-    title: "Web App Dev",
-    description: "Build robust and scalable web applications with cutting-edge technologies for your business.",
+    title: "Premium Drone Survey",
+    description: "IDR 75,000 per hectare | Minimum area: 100 hectares",
     icon: "monitor",
   },
   {
     id: "2",
-    title: "Mobile App Dev",
-    description: "Create stunning mobile applications for iOS and Android platforms with seamless user experience.",
+    title: "Trossen Counting Package",
+    description: "AI Computer Vision Drone Service | IDR 100,000 per hectare | Minimum area: 100 hectares",
     icon: "smartphone",
-  },
-  {
-    id: "3",
-    title: "Data Analyst",
-    description: "Transform your data into actionable insights with advanced analytics and visualization.",
-    icon: "database",
-  },
-  {
-    id: "4",
-    title: "IoT Solution",
-    description: "Connect your devices and build smart solutions with our IoT expertise and platform.",
-    icon: "cpu",
-  },
-  {
-    id: "5",
-    title: "DevOps",
-    description: "Streamline your development and operations with our comprehensive DevOps solutions.",
-    icon: "cloud",
   },
 ];
 
@@ -409,22 +391,99 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-[#4927F5] text-center mb-12" data-testid="heading-services">
             Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <Card key={service.id} className="border-2 hover:shadow-lg transition-shadow" data-testid={`service-card-${service.id}`}>
-                <CardContent className="p-6">
-                  <div className="text-[#4927F5] mb-4" data-testid={`service-icon-${service.id}`}>
-                    {getServiceIcon(service.icon)}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3" data-testid={`service-title-${service.id}`}>
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4" data-testid={`service-description-${service.id}`}>
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Premium Drone Survey */}
+            <Card className="border-2 border-[#4927F5] hover:shadow-lg transition-shadow" data-testid="service-card-1">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[#4927F5] mb-2" data-testid="service-title-1">
+                  Premium Drone Survey
+                </h3>
+                <p className="text-lg font-semibold text-gray-900 mb-1" data-testid="service-price-1">
+                  IDR 75,000 per hectare
+                </p>
+                <p className="text-sm text-gray-600 mb-6" data-testid="service-minimum-1">
+                  Minimum area: 100 hectares
+                </p>
+                <p className="text-gray-600 mb-4" data-testid="service-intro-1">
+                  This package provides a comprehensive analysis of your estate, combining drone mapping and Artificial Intelligence. It includes:
+                </p>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li className="flex items-start" data-testid="service-feature-1-1">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>High-resolution drone mapping and orthophoto generation.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-1-2">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>AI-driven analysis to identify healthy and abnormal individual palm trees.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-1-3">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Monitoring of ground cover cleanliness and detailed weed detection.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-1-4">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>Analysis of planting density and palm spacing metrics.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-1-5">
+                    <span className="text-[#4927F5] mr-2">•</span>
+                    <span>A comprehensive report detailing the full condition of your plantation.</span>
+                  </li>
+                </ul>
+                <p className="font-semibold text-[#4927F5]" data-testid="service-turnaround-1">
+                  Turnaround Time: Completed in 1–2 days
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Trossen Counting Package */}
+            <Card className="border-2 border-[#FF7D04] hover:shadow-lg transition-shadow" data-testid="service-card-2">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[#FF7D04] mb-1" data-testid="service-title-2">
+                  Trossen Counting Package
+                </h3>
+                <p className="text-sm text-gray-600 mb-2" data-testid="service-subtitle-2">
+                  AI Computer Vision Drone Service
+                </p>
+                <p className="text-lg font-semibold text-gray-900 mb-1" data-testid="service-price-2">
+                  IDR 100,000 per hectare
+                </p>
+                <p className="text-sm text-gray-600 mb-6" data-testid="service-minimum-2">
+                  Minimum area: 100 hectares
+                </p>
+                <p className="text-gray-600 mb-4" data-testid="service-intro-2">
+                  This package delivers the complete trossen (bunch) counting process for your plantation using our specialized AI Computer Vision Drone system, integrated with a real-time data analysis server.
+                </p>
+                <p className="font-semibold text-gray-900 mb-3" data-testid="service-features-heading-2">
+                  Key Features and Process:
+                </p>
+                <ul className="space-y-2 text-gray-600 mb-4">
+                  <li className="flex items-start" data-testid="service-feature-2-1">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>High-precision mapping to enable drone flight path automation.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-2-2">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Automated routing between fronds, utilizing advanced flight methods (Zigzag, up/down pattern, and full autopilot) to ensure comprehensive coverage.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-2-3">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Defining mission checkpoints and end points for accurate data collection.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-2-4">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Immediate, secure data delivery to the analysis server.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-2-5">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>AI Processing: Rapid image analysis using proprietary AI algorithms for bunch detection and counting.</span>
+                  </li>
+                  <li className="flex items-start" data-testid="service-feature-2-6">
+                    <span className="text-[#FF7D04] mr-2">•</span>
+                    <span>Access to a comprehensive Dashboard and Final Report.</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
