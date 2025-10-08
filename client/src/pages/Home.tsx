@@ -534,20 +534,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Join Team Section */}
-      <section className="py-20 px-6 bg-white" data-testid="section-join-team">
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-white" data-testid="section-cta">
         <div className="max-w-7xl mx-auto">
-          <Card className="bg-[#4927F5] text-white p-12 text-center" data-testid="card-join-team">
+          <Card className="bg-[#4927F5] text-white p-12 text-center" data-testid="card-cta">
             <CardContent>
-              <h2 className="text-4xl font-bold mb-4" data-testid="heading-join-team">
-                Be The Part<br />of Arkeocode Team
+              <h2 className="text-4xl font-bold mb-4" data-testid="heading-cta">
+                Ready to Optimize Your Palm Oil Estate?
               </h2>
-              <p className="mb-8 text-purple-100" data-testid="text-join-description">
-                We need the best person from you and we see potential too, let's join us.
+              <p className="mb-8 text-purple-100 max-w-3xl mx-auto" data-testid="text-cta-description">
+                Contact us today for a free consultation and discover how our drone survey technology can transform your palm oil plantation operations.
               </p>
-              <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg" data-testid="button-contact-now">
-                Contact Now
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg" data-testid="button-get-quote">
+                  Get a Free Quote →
+                </Button>
+                <Button className="bg-white hover:bg-gray-100 text-[#4927F5] px-8 py-6 text-lg" data-testid="button-schedule-demo">
+                  Schedule a Demo →
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
