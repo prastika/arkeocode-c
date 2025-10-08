@@ -231,7 +231,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto mb-12">
             <div className="relative bg-black rounded-lg overflow-hidden aspect-video" data-testid="video-container">
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="w-20 h-20 rounded-full bg-[#4CAF50] hover:bg-[#45A049] flex items-center justify-center transition-colors" data-testid="button-play-video">
+                <button className="w-20 h-20 rounded-full bg-[#D639D4] hover:bg-[#C020C4] flex items-center justify-center transition-colors" data-testid="button-play-video">
                   <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
