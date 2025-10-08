@@ -12,6 +12,7 @@ import heroImage from "@assets/oil palm_1759898697188.jpg";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "wouter";
 
 const stats: Stat[] = [
   { number: "7+", label: "Years Experience" },
@@ -166,7 +167,7 @@ export default function Home() {
           
           <nav className="hidden md:flex items-center gap-8" data-testid="nav-menu">
             <a href="#home" className="hover:opacity-80 transition-opacity" data-testid="link-home">Home</a>
-            <a href="#cakravolo" className="hover:opacity-80 transition-opacity" data-testid="link-cakravolo">Cakravolo</a>
+            <Link href="/cakravolo" className="hover:opacity-80 transition-opacity" data-testid="link-cakravolo">Cakravolo</Link>
             <a href="#service" className="hover:opacity-80 transition-opacity" data-testid="link-service">Service</a>
             <a href="#article" className="hover:opacity-80 transition-opacity" data-testid="link-article">Article</a>
           </nav>
