@@ -36,6 +36,20 @@ export default function Cakravolo() {
         </div>
       </section>
 
+      {/* New Section */}
+      <section className="py-20 px-6 bg-white" data-testid="section-new">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-new-section">
+              Section Title
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-new-section">
+              Add your content here.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Section */}
       <section className="py-20 px-6 bg-white" data-testid="section-content">
         <div className="max-w-7xl mx-auto">
