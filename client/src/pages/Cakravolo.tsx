@@ -186,10 +186,10 @@ export default function Cakravolo() {
                   <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-5">TAHAP 5</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-5">
-                  Akses Dashboard & Penyampaian Data
+                  Real-Time Dashboard
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-5">
-                  Akses real-time ke dashboard interaktif untuk memantau progress survei dan hasil analisis. Semua data tersedia dalam format digital yang mudah diakses dan dibagikan kepada tim Anda.
+                  The processed and validated data is immediately visualized for the client. Real-time Dashboard allows users to track the status of the in-field bunch census and access the final yield forecast.
                 </p>
               </div>
             </div>
