@@ -209,7 +209,7 @@ export default function Cakravolo() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-platform">
-              Cakravolo Platform
+              Cakravolo - AI Computer Vision Drone Services
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mb-8" data-testid="text-platform-description">
               Our comprehensive platform combines cutting-edge drone technology with artificial intelligence to revolutionize agricultural management and productivity analysis.
