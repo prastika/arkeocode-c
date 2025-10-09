@@ -152,10 +152,10 @@ export default function Cakravolo() {
                   <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-4">TAHAP 4</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-4">
-                  Laporan
+                  AI Analysis & Validation
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-4">
-                  Hanya dalam satu hari setelah seluruh survei selesai, laporan visual yang komprehensif sudah siap untuk diakses.
+                  Raw count data is run through rigorous algorithms on the server. Digital Due Diligence and AI-based analysis validate the bunch count, ensuring high accuracy.
                 </p>
               </div>
               <div className="order-2">
