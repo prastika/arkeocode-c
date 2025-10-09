@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowLeft, Plane } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import logoImage from "@assets/Group 1_1759888320639.png";
+import droneImage from "@assets/Professional_Drone_in_Mid-Flight-removebg-preview_1760022618496.png";
 
 export default function DroneSpecifications() {
   const specifications = [
@@ -42,9 +43,12 @@ export default function DroneSpecifications() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 rounded-full bg-[#4927F5] flex items-center justify-center" data-testid="icon-drone">
-              <Plane className="w-10 h-10 text-white" />
-            </div>
+            <img 
+              src={droneImage} 
+              alt="Professional Drone" 
+              className="w-64 h-auto object-contain"
+              data-testid="img-drone"
+            />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4" data-testid="heading-main">
             Drone Specifications
