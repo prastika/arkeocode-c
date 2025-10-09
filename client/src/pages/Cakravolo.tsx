@@ -68,10 +68,10 @@ export default function Cakravolo() {
               </div>
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-1">
+                  <div className="w-12 h-12 rounded-full bg-[#D639D4] flex items-center justify-center" data-testid="workflow-icon-1">
                     <Monitor className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-1">STAGE 1</span>
+                  <span className="text-sm font-semibold text-[#D639D4]" data-testid="workflow-label-1">STAGE 1</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-1">
                   Flight Deployment
@@ -80,7 +80,7 @@ export default function Cakravolo() {
                   Automated deployment of intelligent UAVs (Drones) across the plantation. Automation and Obstacle Avoidance ensures efficient, safe, and complete coverage of the estate.
                 </p>
                 <Link href="/drone-specifications">
-                  <Button className="bg-[#4EE1A5] hover:bg-[#3DD194] text-white" data-testid="button-drone-specs">
+                  <Button className="bg-[#D639D4] hover:bg-[#B829BC] text-white" data-testid="button-drone-specs">
                     Drone Specifications
                   </Button>
                 </Link>
