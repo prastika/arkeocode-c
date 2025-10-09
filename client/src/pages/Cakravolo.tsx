@@ -130,10 +130,10 @@ export default function Cakravolo() {
               </div>
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-3">
+                  <div className="w-12 h-12 rounded-full bg-[#D639D4] flex items-center justify-center" data-testid="workflow-icon-3">
                     <Brain className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-3">STAGE 3</span>
+                  <span className="text-sm font-semibold text-[#D639D4]" data-testid="workflow-label-3">STAGE 3</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-3">
                   Data Transmission
@@ -182,10 +182,10 @@ export default function Cakravolo() {
               </div>
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-5">
+                  <div className="w-12 h-12 rounded-full bg-[#D639D4] flex items-center justify-center" data-testid="workflow-icon-5">
                     <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-5">STAGE 5</span>
+                  <span className="text-sm font-semibold text-[#D639D4]" data-testid="workflow-label-5">STAGE 5</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-5">
                   Reporting & Tracking
@@ -194,7 +194,7 @@ export default function Cakravolo() {
                   The processed and validated data is immediately visualized for the client. Real-time Dashboard allows users to track the status of the in-field bunch census and access the final yield forecast.
                 </p>
                 <a href="https://replit.com/@prasttika/AgriVision" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-[#4EE1A5] hover:bg-[#3DD194] text-white" data-testid="button-system-demo">
+                  <Button className="bg-[#D639D4] hover:bg-[#B829BC] text-white" data-testid="button-system-demo">
                     System Demo
                   </Button>
                 </a>
