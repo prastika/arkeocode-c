@@ -94,7 +94,7 @@ export default function Cakravolo() {
                   <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-2">
                     <Database className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-2">TAHAP 2</span>
+                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-2">STAGE 2</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-2">
                   Real-Time Sensing
@@ -133,7 +133,7 @@ export default function Cakravolo() {
                   <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-3">
                     <Brain className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-3">TAHAP 3</span>
+                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-3">STAGE 3</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-3">
                   Data Transmission
@@ -151,7 +151,7 @@ export default function Cakravolo() {
                   <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-4">
                     <CheckSquare className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-4">TAHAP 4</span>
+                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-4">STAGE 4</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-4">
                   AI Validation
@@ -185,7 +185,7 @@ export default function Cakravolo() {
                   <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-5">
                     <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-5">TAHAP 5</span>
+                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-5">STAGE 5</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-5">
                   Reporting & Tracking
