@@ -45,7 +45,7 @@ export default function Cakravolo() {
               work flow
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-testid="heading-workflow">
-              Survei Cerdas: Data, Analisis, dan Laporan dalam Satu Alur Kerja
+              AI Drone Trossen Telling
             </h2>
           </div>
 
