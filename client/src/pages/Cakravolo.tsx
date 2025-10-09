@@ -47,6 +47,9 @@ export default function Cakravolo() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-testid="heading-workflow">
               AI Drone Trossen Telling
             </h2>
+            <h3 className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="subheading-workflow">
+              This automated process replaces manual census methods, providing rapid, accurate, and real-time yield data
+            </h3>
           </div>
 
           <div className="space-y-16">
