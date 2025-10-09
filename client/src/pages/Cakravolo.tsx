@@ -89,11 +89,14 @@ export default function Cakravolo() {
                   <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-2">TAHAP 2</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-2">
-                  Konsolidasi dan Validasi Data Survei
+                  Real-Time Sensing
                 </h3>
-                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-2">
+                <p className="text-gray-600 leading-relaxed mb-6" data-testid="workflow-description-2">
                   The drone executes a precision flight path while its cameras capture high-resolution imagery. AI Computer Vision instantly identifies and counts fresh fruit bunches (FFB) and flowers in real time.
                 </p>
+                <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-computer-vision-demo">
+                  Computer Vision Demo
+                </Button>
               </div>
               <div className="order-2">
                 <img 
