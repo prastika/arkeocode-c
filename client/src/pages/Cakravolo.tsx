@@ -189,9 +189,14 @@ export default function Cakravolo() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-5">
                   Reporting & Tracking
                 </h3>
-                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-5">
+                <p className="text-gray-600 leading-relaxed mb-6" data-testid="workflow-description-5">
                   The processed and validated data is immediately visualized for the client. Real-time Dashboard allows users to track the status of the in-field bunch census and access the final yield forecast.
                 </p>
+                <a href="https://replit.com/@prasttika/AgriVision" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#4EE1A5] hover:bg-[#3DD194] text-white" data-testid="button-system-demo">
+                    System Demo
+                  </Button>
+                </a>
               </div>
             </div>
 
