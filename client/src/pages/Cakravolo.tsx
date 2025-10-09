@@ -80,7 +80,7 @@ export default function Cakravolo() {
                   Automated deployment of intelligent UAVs (Drones) across the plantation. Automation and Obstacle Avoidance ensures efficient, safe, and complete coverage of the estate.
                 </p>
                 <Link href="/drone-specifications">
-                  <Button className="bg-[#D639D4] hover:bg-[#B829BC] text-white" data-testid="button-drone-specs">
+                  <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-drone-specs">
                     Drone Specifications
                   </Button>
                 </Link>
