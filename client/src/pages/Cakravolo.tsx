@@ -91,10 +91,10 @@ export default function Cakravolo() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="workflow-step-2">
               <div className="order-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-2">
+                  <div className="w-12 h-12 rounded-full bg-[#FF7D04] flex items-center justify-center" data-testid="workflow-icon-2">
                     <Database className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-2">STAGE 2</span>
+                  <span className="text-sm font-semibold text-[#FF7D04]" data-testid="workflow-label-2">STAGE 2</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-2">
                   Real-Time Sensing
@@ -103,7 +103,7 @@ export default function Cakravolo() {
                   The drone executes a precision flight path while its cameras capture high-resolution imagery. AI Computer Vision instantly identifies and counts fresh fruit bunches (FFB) and flowers in real time.
                 </p>
                 <Link href="/computer-vision-demo">
-                  <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-computer-vision-demo">
+                  <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white" data-testid="button-computer-vision-demo">
                     Computer Vision Demo
                   </Button>
                 </Link>
@@ -148,10 +148,10 @@ export default function Cakravolo() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="workflow-step-4">
               <div className="order-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-4">
+                  <div className="w-12 h-12 rounded-full bg-[#FF7D04] flex items-center justify-center" data-testid="workflow-icon-4">
                     <CheckSquare className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-4">STAGE 4</span>
+                  <span className="text-sm font-semibold text-[#FF7D04]" data-testid="workflow-label-4">STAGE 4</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-4">
                   AI Validation
