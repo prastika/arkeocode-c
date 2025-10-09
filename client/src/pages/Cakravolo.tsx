@@ -92,7 +92,7 @@ export default function Cakravolo() {
                   Konsolidasi dan Validasi Data Survei
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-2">
-                  Mengintegrasikan setiap data pemetaan drone melalui alur kerja yang sistematis yang mencakup: validasi data, sinkronisasi koordinat GPS presisi, dan quality control yang ketat untuk menjamin informasi perkebungan yang lengkap dan akurat.
+                  The drone executes a precision flight path while its cameras capture high-resolution imagery. AI Computer Vision instantly identifies and counts fresh fruit bunches (FFB) and flowers in real time.
                 </p>
               </div>
               <div className="order-2">
