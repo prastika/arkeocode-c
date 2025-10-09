@@ -134,7 +134,7 @@ export default function Cakravolo() {
                   <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-3">TAHAP 3</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-3">
-                  Real-Time Data Transfer
+                  Data Transmission
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-3">
                   Data is immediately transferred from the drone to the processing center during the flight. Real-time Data Connection to Server facilitates instant data processing without delays.
