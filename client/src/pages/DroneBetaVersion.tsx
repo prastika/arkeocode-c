@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowLeft, Calendar, FileText, Wrench } from "lucide-react";
+import { ArrowLeft, Calendar, FileText, Wrench, Target, Zap, Shield } from "lucide-react";
 import logoImage from "@assets/Group 1_1759888320639.png";
 
 export default function DroneBetaVersion() {
@@ -106,6 +106,45 @@ export default function DroneBetaVersion() {
                 AI-powered obstacle prediction reduces flight interruptions by 45%, ensuring safer and more efficient operations.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* 3 Column Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow" data-testid="feature-card-1">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#4927F5]/10 flex items-center justify-center">
+                <Target className="w-8 h-8 text-[#4927F5]" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-1">95% Accuracy</h3>
+            <p className="text-gray-600" data-testid="feature-description-1">
+              AI-powered computer vision achieves 95% accuracy in fresh fruit bunch detection and counting across all weather conditions.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow" data-testid="feature-card-2">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#4927F5]/10 flex items-center justify-center">
+                <Zap className="w-8 h-8 text-[#4927F5]" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-2">Real-Time Processing</h3>
+            <p className="text-gray-600" data-testid="feature-description-2">
+              Instant data transmission and cloud processing enable real-time analysis and immediate yield forecasting during flight operations.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow" data-testid="feature-card-3">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#4927F5]/10 flex items-center justify-center">
+                <Shield className="w-8 h-8 text-[#4927F5]" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-3">Enhanced Safety</h3>
+            <p className="text-gray-600" data-testid="feature-description-3">
+              Advanced obstacle detection and terrain-following technology reduces flight interruptions by 45% for safer autonomous operations.
+            </p>
           </div>
         </div>
 
