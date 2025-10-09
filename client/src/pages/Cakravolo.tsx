@@ -134,10 +134,10 @@ export default function Cakravolo() {
                   <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-3">TAHAP 3</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-3">
-                  Analisis AI
+                  Real-Time Data Transfer
                 </h3>
                 <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-3">
-                  Sistem AI yang kami kembangkan berdasarkan riset mendalam akan mengolah data hasil integrasi secara sistematis untuk mengidentifikasi pola-pola penting dalam kebun sawit Anda.
+                  Data is immediately transferred from the drone to the processing center during the flight. Real-time Data Connection to Server facilitates instant data processing without delays.
                 </p>
               </div>
             </div>
