@@ -42,7 +42,7 @@ export default function Cakravolo() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-block px-6 py-2 bg-[#4EE1A5]/10 text-[#4EE1A5] rounded-full text-sm font-medium mb-6" data-testid="badge-workflow">
-              Alur Kerja
+              work flow
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-testid="heading-workflow">
               Survei Cerdas: Data, Analisis, dan Laporan dalam Satu Alur Kerja
