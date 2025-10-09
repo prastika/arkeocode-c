@@ -115,6 +115,24 @@ export default function DroneSpecifications() {
             </p>
           </div>
         </div>
+
+        {/* Beta Version CTA Section */}
+        <div className="mt-16 bg-gradient-to-r from-[#4927F5] to-[#6B46F5] rounded-lg shadow-xl p-12 text-center" data-testid="section-beta">
+          <h2 className="text-3xl font-bold text-white mb-4" data-testid="heading-beta">
+            Development Updates & Beta Version
+          </h2>
+          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto" data-testid="text-beta-description">
+            Stay up to date with our latest drone technology improvements, testing results, and beta version releases.
+          </p>
+          <Link href="/drone-beta-version">
+            <Button 
+              className="bg-white text-[#4927F5] hover:bg-gray-100 text-lg px-8 py-6 font-semibold" 
+              data-testid="button-beta-version"
+            >
+              Our Beta Version
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
