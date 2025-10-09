@@ -194,7 +194,7 @@ export default function Cakravolo() {
                   The processed and validated data is immediately visualized for the client. Real-time Dashboard allows users to track the status of the in-field bunch census and access the final yield forecast.
                 </p>
                 <a href="https://replit.com/@prasttika/AgriVision" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-[#D639D4] hover:bg-[#B829BC] text-white" data-testid="button-system-demo">
+                  <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-system-demo">
                     System Demo
                   </Button>
                 </a>
