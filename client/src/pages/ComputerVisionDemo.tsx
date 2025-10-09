@@ -10,6 +10,7 @@ export default function ComputerVisionDemo() {
   const [detectedImageUrl, setDetectedImageUrl] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [fileType, setFileType] = useState<'image' | 'video' | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -17,6 +18,7 @@ export default function ComputerVisionDemo() {
 
     setSelectedFile(file);
     setDetectedImageUrl(null);
+    setError(null);
 
     const url = URL.createObjectURL(file);
     setPreviewUrl(url);
@@ -32,6 +34,7 @@ export default function ComputerVisionDemo() {
     if (!selectedFile) return;
 
     setIsProcessing(true);
+    setError(null);
 
     const formData = new FormData();
     formData.append('file', selectedFile);
@@ -43,7 +46,8 @@ export default function ComputerVisionDemo() {
       });
 
       if (!response.ok) {
-        throw new Error('Detection failed');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Detection failed');
       }
 
       const blob = await response.blob();
@@ -51,7 +55,7 @@ export default function ComputerVisionDemo() {
       setDetectedImageUrl(url);
     } catch (error) {
       console.error('Error during detection:', error);
-      alert('Error processing image. Please try again.');
+      setError(error instanceof Error ? error.message : 'Error processing image. Please try again.');
     } finally {
       setIsProcessing(false);
     }
@@ -165,7 +169,7 @@ export default function ComputerVisionDemo() {
               Detection Results
             </h2>
 
-            {!detectedImageUrl && !isProcessing && (
+            {!detectedImageUrl && !isProcessing && !error && (
               <div className="flex items-center justify-center h-64 border-2 border-dashed border-gray-300 rounded-lg">
                 <p className="text-gray-500" data-testid="text-no-results">
                   Upload and process a file to see results
@@ -181,6 +185,17 @@ export default function ComputerVisionDemo() {
                     Processing with AI Computer Vision...
                   </p>
                 </div>
+              </div>
+            )}
+
+            {error && !isProcessing && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <p className="text-yellow-800 font-medium mb-2" data-testid="text-error-title">
+                  ⚠️ Demo Environment Notice
+                </p>
+                <p className="text-yellow-700 text-sm leading-relaxed" data-testid="text-error-message">
+                  {error}
+                </p>
               </div>
             )}
 

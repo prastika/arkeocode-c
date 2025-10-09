@@ -91,8 +91,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
         
         return res.status(500).json({ 
-          error: "Object detection failed. Please ensure Python dependencies are installed.",
-          details: execError.message
+          error: "Object detection is currently unavailable in this demo environment. The actual YOLO model requires PyTorch and Ultralytics packages which are not available in the current Nix environment. In a production environment with proper Python dependencies, this would perform real-time object detection on palm oil plantation images to identify Fresh Fruit Bunches (FFB) and flowers.",
+          details: "Python environment configuration issue"
         });
       }
 
