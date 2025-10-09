@@ -87,10 +87,23 @@ export default function ComputerVisionDemo() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4" data-testid="heading-demo">
             Computer Vision Demo
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto" data-testid="text-description">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8" data-testid="text-description">
             Upload an image or video to see our AI-powered object detection in action. 
             The system will identify and count fresh fruit bunches (FFB) and flowers in real-time.
           </p>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/nZRVsYXUT1E"
+                title="Computer Vision Demo Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                data-testid="video-demo"
+              ></iframe>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
