@@ -200,53 +200,27 @@ export default function Cakravolo() {
               </div>
             </div>
 
-            {/* Step 6 - Left Text, Right Image */}
+            {/* Step 6 - Left Image, Right Text */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="workflow-step-6">
-              <div className="order-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-6">
-                    <FileCheck className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-6">TAHAP 6</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-6">
-                  Verifikasi dan Quality Assurance
-                </h3>
-                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-6">
-                  Tim ahli kami melakukan pemeriksaan menyeluruh terhadap setiap data dan hasil analisis untuk memastikan akurasi maksimal sebelum diserahkan kepada klien.
-                </p>
-              </div>
-              <div className="order-2">
-                <img 
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000" 
-                  alt="Quality Assurance" 
-                  className="rounded-lg shadow-lg w-full h-auto object-cover"
-                  data-testid="workflow-image-6"
-                />
-              </div>
-            </div>
-
-            {/* Step 7 - Left Image, Right Text */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="workflow-step-7">
               <div className="order-2 lg:order-1">
                 <img 
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000" 
                   alt="Client Support" 
                   className="rounded-lg shadow-lg w-full h-auto object-cover"
-                  data-testid="workflow-image-7"
+                  data-testid="workflow-image-6"
                 />
               </div>
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-7">
+                  <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-6">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-7">TAHAP 7</span>
+                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-6">TAHAP 6</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-7">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-6">
                   Konsultasi & Dukungan Berkelanjutan
                 </h3>
-                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-7">
+                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-6">
                   Kami memberikan konsultasi lanjutan untuk membantu Anda memahami dan mengimplementasikan rekomendasi dari hasil survei, memastikan hasil optimal untuk perkebunan Anda.
                 </p>
               </div>
