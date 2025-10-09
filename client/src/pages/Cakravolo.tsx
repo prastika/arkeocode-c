@@ -71,7 +71,7 @@ export default function Cakravolo() {
                   <div className="w-12 h-12 rounded-full bg-[#4EE1A5] flex items-center justify-center" data-testid="workflow-icon-1">
                     <Monitor className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-1">TAHAP 1</span>
+                  <span className="text-sm font-semibold text-[#4EE1A5]" data-testid="workflow-label-1">STAGE 1</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-1">
                   Flight Deployment
