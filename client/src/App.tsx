@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 
 import Home from "@/pages/Home";
 import Cakravolo from "@/pages/Cakravolo";
+import ComputerVisionDemo from "@/pages/ComputerVisionDemo";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       {/* Add pages below */}
       <Route path="/" component={Home} />
       <Route path="/cakravolo" component={Cakravolo} />
+      <Route path="/computer-vision-demo" component={ComputerVisionDemo} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

@@ -95,9 +95,11 @@ export default function Cakravolo() {
                 <p className="text-gray-600 leading-relaxed mb-6" data-testid="workflow-description-2">
                   The drone executes a precision flight path while its cameras capture high-resolution imagery. AI Computer Vision instantly identifies and counts fresh fruit bunches (FFB) and flowers in real time.
                 </p>
-                <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-computer-vision-demo">
-                  Computer Vision Demo
-                </Button>
+                <Link href="/computer-vision-demo">
+                  <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-computer-vision-demo">
+                    Computer Vision Demo
+                  </Button>
+                </Link>
               </div>
               <div className="order-2">
                 <img 
