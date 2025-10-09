@@ -199,32 +199,6 @@ export default function Cakravolo() {
                 </a>
               </div>
             </div>
-
-            {/* Step 6 - Left Image, Right Text */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="workflow-step-6">
-              <div className="order-2 lg:order-1">
-                <img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000" 
-                  alt="Client Support" 
-                  className="rounded-lg shadow-lg w-full h-auto object-cover"
-                  data-testid="workflow-image-6"
-                />
-              </div>
-              <div className="order-1 lg:order-2">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#FF6B6B] flex items-center justify-center" data-testid="workflow-icon-6">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-sm font-semibold text-[#FF6B6B]" data-testid="workflow-label-6">TAHAP 6</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-6">
-                  Konsultasi & Dukungan Berkelanjutan
-                </h3>
-                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-6">
-                  Kami memberikan konsultasi lanjutan untuk membantu Anda memahami dan mengimplementasikan rekomendasi dari hasil survei, memastikan hasil optimal untuk perkebunan Anda.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
