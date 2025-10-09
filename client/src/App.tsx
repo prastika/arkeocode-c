@@ -10,6 +10,7 @@ import Cakravolo from "@/pages/Cakravolo";
 import ComputerVisionDemo from "@/pages/ComputerVisionDemo";
 import DroneSpecifications from "@/pages/DroneSpecifications";
 import DroneBetaVersion from "@/pages/DroneBetaVersion";
+import PosiSystemDemo from "@/pages/PosiSystemDemo";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/computer-vision-demo" component={ComputerVisionDemo} />
       <Route path="/drone-specifications" component={DroneSpecifications} />
       <Route path="/drone-beta-version" component={DroneBetaVersion} />
+      <Route path="/posi-system-demo" component={PosiSystemDemo} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
