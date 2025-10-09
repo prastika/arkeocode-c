@@ -210,9 +210,14 @@ export default function Cakravolo() {
             <h2 className="text-4xl font-bold text-[#4927F5] mb-6" data-testid="heading-platform">
               Cakravolo Platform
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-platform-description">
+            <p className="text-gray-600 max-w-3xl mx-auto mb-8" data-testid="text-platform-description">
               Our comprehensive platform combines cutting-edge drone technology with artificial intelligence to revolutionize agricultural management and productivity analysis.
             </p>
+            <a href="https://wa.me/6281387873919" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white text-lg px-8 py-6" data-testid="button-book-demo">
+                Book Your Free Demo
+              </Button>
+            </a>
           </div>
         </div>
       </section>
