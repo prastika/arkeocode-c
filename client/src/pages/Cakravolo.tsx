@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import logoImage from "@assets/Group 1_1759888320639.png";
 import footerLogoImage from "@assets/Group 2_1759888453960.png";
 import cakravoloLogo from "@assets/cakravolo (500 x 160 px)_1759940883500.png";
+import sense1Image from "@assets/sense1_1759979879439.png";
 import { Monitor, Database, Brain, CheckSquare, Cloud, FileCheck, Users } from "lucide-react";
 
 export default function Cakravolo() {
@@ -100,8 +101,8 @@ export default function Cakravolo() {
               </div>
               <div className="order-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000" 
-                  alt="Data Consolidation" 
+                  src={sense1Image} 
+                  alt="Real-Time Computer Vision Sensing" 
                   className="rounded-lg shadow-lg w-full h-auto object-cover"
                   data-testid="workflow-image-2"
                 />
