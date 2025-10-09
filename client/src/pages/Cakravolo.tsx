@@ -74,9 +74,14 @@ export default function Cakravolo() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="workflow-title-1">
                   Flight Deployment
                 </h3>
-                <p className="text-gray-600 leading-relaxed" data-testid="workflow-description-1">
+                <p className="text-gray-600 leading-relaxed mb-6" data-testid="workflow-description-1">
                   Automated deployment of intelligent UAVs (Drones) across the plantation. Automation and Obstacle Avoidance ensures efficient, safe, and complete coverage of the estate.
                 </p>
+                <Link href="/drone-specifications">
+                  <Button className="bg-[#4EE1A5] hover:bg-[#3DD194] text-white" data-testid="button-drone-specs">
+                    Drone Specifications
+                  </Button>
+                </Link>
               </div>
             </div>
 

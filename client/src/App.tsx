@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Cakravolo from "@/pages/Cakravolo";
 import ComputerVisionDemo from "@/pages/ComputerVisionDemo";
+import DroneSpecifications from "@/pages/DroneSpecifications";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/cakravolo" component={Cakravolo} />
       <Route path="/computer-vision-demo" component={ComputerVisionDemo} />
+      <Route path="/drone-specifications" component={DroneSpecifications} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
