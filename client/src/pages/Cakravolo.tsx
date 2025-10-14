@@ -261,11 +261,18 @@ export default function Cakravolo() {
               </ul>
             </div>
 
-            <div data-testid="footer-address">
+            <div data-testid="footer-contact">
+              <h3 className="font-bold mb-4" data-testid="text-contact-heading">Our Contact</h3>
+              <p className="text-gray-600 text-sm mb-3" data-testid="text-email">
+                <a href="mailto:arkeocode@gmail.com" className="hover:text-[#4927F5] transition-colors">
+                  arkeocode@gmail.com
+                </a>
+              </p>
               <p className="text-gray-600 text-sm" data-testid="text-address">
-                Permata Regency, Jl. H. Kelik<br />
-                RT. 11/RW. 06 Kel. Srengseng<br />
-                Kec. Kembangan, DKI Jakarta 11630
+                Jl. RC. Veteran Raya No.20 Lantai 4,<br />
+                RT.4/RW.10, Bintaro, Kec. Pesanggrahan,<br />
+                Kota Jakarta Selatan,<br />
+                Daerah Khusus Ibukota Jakarta 12330
               </p>
             </div>
           </div>
