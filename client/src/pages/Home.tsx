@@ -5,7 +5,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { contactFormSchema, type ContactForm, type Stat, type Service, type Product, type Benefit } from "@shared/schema";
-import { Monitor, Smartphone, Database, Cpu, Cloud, Brain, Rocket, CheckSquare, ArrowRight } from "lucide-react";
+import { Monitor, Smartphone, Database, Cpu, Cloud, Brain, Rocket, CheckSquare, ArrowRight, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import logoImage from "@assets/Group 1_1759888320639.png";
 import footerLogoImage from "@assets/Group 2_1759888453960.png";
 import heroImage from "@assets/oil palm_1759898697188.jpg";
@@ -124,6 +125,7 @@ const getBenefitIcon = (iconName: string) => {
 
 export default function Home() {
   const { toast } = useToast();
+  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
   
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactFormSchema),
@@ -168,7 +170,51 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8" data-testid="nav-menu">
             <a href="#home" className="hover:opacity-80 transition-opacity" data-testid="link-home">Home</a>
             <Link href="/cakravolo" className="hover:opacity-80 transition-opacity" data-testid="link-cakravolo">Cakravolo</Link>
-            <a href="#service" className="hover:opacity-80 transition-opacity" data-testid="link-service">Service</a>
+            <div 
+              className="relative"
+              onMouseEnter={() => setServiceMenuOpen(true)}
+              onMouseLeave={() => setServiceMenuOpen(false)}
+            >
+              <button 
+                className="flex items-center gap-1 hover:opacity-80 transition-opacity" 
+                data-testid="link-service"
+              >
+                Service
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {serviceMenuOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 z-50" data-testid="service-dropdown">
+                  <a 
+                    href="#home" 
+                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                    data-testid="submenu-landing-page"
+                  >
+                    Landing Page
+                  </a>
+                  <a 
+                    href="#service" 
+                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                    data-testid="submenu-comprehensive-monitoring"
+                  >
+                    Comprehensive Monitoring
+                  </a>
+                  <a 
+                    href="#service" 
+                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                    data-testid="submenu-ai-drone-census"
+                  >
+                    AI Drone Census
+                  </a>
+                  <a 
+                    href="#service" 
+                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                    data-testid="submenu-agrivision-system"
+                  >
+                    AgriVision System
+                  </a>
+                </div>
+              )}
+            </div>
             <a href="#article" className="hover:opacity-80 transition-opacity" data-testid="link-article">Article</a>
           </nav>
           
