@@ -187,7 +187,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl">
             <p className="text-white text-lg leading-relaxed" data-testid="text-hero-description">
-              Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI. We replace slow, risky manual surveys with autonomous census missions that identify and analyze every plant and potential yield indicator in real-time. Our data-driven service delivers 100% accurate information for precise yield forecasting, fertilizer optimization, and targeted pest intervention, empowering plantation managers to make smarter strategic decisions for maximum efficiency and profitability.
+              Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI. We replace slow, risky manual surveys with autonomous census missions that identify and analyze every plant and potential yield indicator in real-time. Our data-driven service delivers 98% accurate information for precise yield forecasting, fertilizer optimization, and targeted pest intervention, empowering plantation managers to make smarter strategic decisions for maximum efficiency and profitability.
             </p>
             <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg mt-8" data-testid="button-learn-more">
               Learn More
