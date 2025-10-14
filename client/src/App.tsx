@@ -11,6 +11,10 @@ import ComputerVisionDemo from "@/pages/ComputerVisionDemo";
 import DroneSpecifications from "@/pages/DroneSpecifications";
 import DroneBetaVersion from "@/pages/DroneBetaVersion";
 import PosiSystemDemo from "@/pages/PosiSystemDemo";
+import LandingPage from "@/pages/LandingPage";
+import ComprehensiveMonitoring from "@/pages/ComprehensiveMonitoring";
+import AIDroneCensus from "@/pages/AIDroneCensus";
+import AgriVisionSystem from "@/pages/AgriVisionSystem";
 
 function Router() {
   return (
@@ -22,6 +26,10 @@ function Router() {
       <Route path="/drone-specifications" component={DroneSpecifications} />
       <Route path="/drone-beta-version" component={DroneBetaVersion} />
       <Route path="/posi-system-demo" component={PosiSystemDemo} />
+      <Route path="/landing-page" component={LandingPage} />
+      <Route path="/comprehensive-monitoring" component={ComprehensiveMonitoring} />
+      <Route path="/ai-drone-census" component={AIDroneCensus} />
+      <Route path="/agrivision-system" component={AgriVisionSystem} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
