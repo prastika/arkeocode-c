@@ -37,3 +37,35 @@ export const contactFormSchema = z.object({
 });
 
 export type ContactForm = z.infer<typeof contactFormSchema>;
+
+// Plantation Survey schema
+export const plantationSurveySchema = z.object({
+  estateSize: z.enum(["less_than_500", "500_to_2000", "more_than_2000"], {
+    required_error: "Please select your estate size",
+  }),
+  primaryGoal: z.enum([
+    "accurate_maps",
+    "yield_forecasting",
+    "pest_detection",
+  ], {
+    required_error: "Please select your primary goal",
+  }),
+  yieldConfidence: z.enum([
+    "very_confident",
+    "moderately_confident",
+    "low_confidence",
+  ], {
+    required_error: "Please select your confidence level",
+  }),
+  criticalData: z.enum([
+    "spatial_data",
+    "yield_data",
+  ], {
+    required_error: "Please select your critical data requirement",
+  }),
+  matureStands: z.enum(["yes", "no"], {
+    required_error: "Please select your stand composition",
+  }),
+});
+
+export type PlantationSurvey = z.infer<typeof plantationSurveySchema>;

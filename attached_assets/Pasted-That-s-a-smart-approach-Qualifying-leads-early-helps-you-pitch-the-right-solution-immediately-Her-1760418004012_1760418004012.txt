@@ -1,0 +1,53 @@
+That's a smart approach! Qualifying leads early helps you pitch the right solution immediately.
+
+Here is a structured, five-step survey designed for your landing page. It starts broad to assess their plantation reality, then narrows down to determine if they are ready for the basic Comprehensive Monitoring (mapping/health) or the advanced AI Drone (Trossen Counting/Yield Forecasting).
+
+Plantation Readiness Survey: Choosing Your Digital Solution
+This short survey helps us understand your operation so we can recommend the perfect service package (Comprehensive Monitoring or AI Yield Forecasting).
+
+1. Operation Scale & Immediate Goal
+A. What is the total size of the estate you wish to survey?
+
+□ Less than 500 Hectares
+
+□ 500 – 2,000 Hectares
+
+□ More than 2,000 Hectares
+
+B. What is your primary challenge or immediate goal? (Select one)
+
+□ Gaining accurate, up-to-date plantation maps and tree health data.
+
+□ Improving the precision of my Fresh Fruit Bunch (FFB) yield forecasts (trossen counting).
+
+□ Detecting early signs of pest, disease, and nutrient deficiencies.
+
+2. Current Pain Point (Trossen Counting Focus)
+C. How confident are you in the accuracy of your current method for forecasting FFB yield (bunch counting)?
+
+□ Very confident (We use modern methods and data is highly reliable).
+
+□ Moderately confident (We use manual census, but results are often inconsistent).
+
+□ Low confidence (Manual census is slow, expensive, and we routinely miss 10%+ of potential yield).
+
+3. Service Requirement Assessment
+D. Which of the following data points is the most critical for your next decision-making cycle? (Select one)
+
+□ Detailed spatial data: Weed detection, stand density, and high-resolution mapping. (Focuses on Comprehensive Monitoring)
+
+□ Real-time yield data: Validated, tree-by-tree bunch and flower counts for harvesting and budget planning. (Focuses on AI Drone / Trossen Counting)
+
+4. Technical Environment
+E. Are your estates primarily composed of dense, mature palm stands (over 7 years old)?
+
+□ Yes, the majority is dense/mature.
+
+□ No, we have a mix of young and mature stands.
+
+Recommended Service Logic (Internal Guide)
+Client Selection Profile	Recommended Package
+D = "Real-time yield data" AND C = "Low confidence"	AI Drone Trossen Counting
+D = "Real-time yield data" AND E = "Yes"	AI Drone Trossen Counting
+D = "Detailed spatial data" OR B = "Gaining accurate maps"	Comprehensive Monitoring
+Any other combination	Start with Comprehensive Monitoring (and consult on AI upgrade path)
