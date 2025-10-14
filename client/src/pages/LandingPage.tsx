@@ -1,11 +1,73 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import logoImage from "@assets/Group 1_1759888320639.png";
 import footerLogoImage from "@assets/Group 2_1759888453960.png";
-import { Rocket, Target, Users, TrendingUp } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { plantationSurveySchema, type PlantationSurvey } from "@shared/schema";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
+type RecommendationResult = {
+  service: "AI Drone Trossen Counting" | "Comprehensive Monitoring";
+  reason: string;
+  upgradePath?: string;
+};
 
 export default function LandingPage() {
+  const [recommendation, setRecommendation] = useState<RecommendationResult | null>(null);
+
+  const form = useForm<PlantationSurvey>({
+    resolver: zodResolver(plantationSurveySchema),
+  });
+
+  const getRecommendation = (data: PlantationSurvey): RecommendationResult => {
+    // D = "Real-time yield data" AND C = "Low confidence" → AI Drone Trossen Counting
+    if (data.criticalData === "yield_data" && data.yieldConfidence === "low_confidence") {
+      return {
+        service: "AI Drone Trossen Counting",
+        reason: "Your need for real-time yield data combined with low confidence in current forecasting methods makes AI Drone Trossen Counting the ideal solution. Our 98% accurate AI-powered census will transform your yield forecasting capabilities.",
+      };
+    }
+
+    // D = "Real-time yield data" AND E = "Yes" → AI Drone Trossen Counting
+    if (data.criticalData === "yield_data" && data.matureStands === "yes") {
+      return {
+        service: "AI Drone Trossen Counting",
+        reason: "Dense, mature palm stands combined with your need for real-time yield data make AI Drone Trossen Counting essential. Our autonomous drones navigate complex canopies to deliver precise bunch counts for accurate harvest planning.",
+      };
+    }
+
+    // D = "Detailed spatial data" OR B = "Gaining accurate maps" → Comprehensive Monitoring
+    if (data.criticalData === "spatial_data" || data.primaryGoal === "accurate_maps") {
+      return {
+        service: "Comprehensive Monitoring",
+        reason: "Your focus on detailed spatial mapping and plantation health analysis aligns perfectly with our Comprehensive Monitoring service. Get high-resolution maps, NDVI analysis, and complete field assessment.",
+        upgradePath: "Once your spatial foundation is established, consider upgrading to AI Trossen Counting for precision yield forecasting.",
+      };
+    }
+
+    // Any other combination → Start with Comprehensive Monitoring
+    return {
+      service: "Comprehensive Monitoring",
+      reason: "Based on your current operational profile, we recommend starting with Comprehensive Monitoring to establish a strong data foundation for your plantation management.",
+      upgradePath: "As your data infrastructure matures, we can discuss upgrading to AI Drone Trossen Counting for advanced yield forecasting capabilities.",
+    };
+  };
+
+  const onSubmit = (data: PlantationSurvey) => {
+    const result = getRecommendation(data);
+    setRecommendation(result);
+  };
+
+  const resetSurvey = () => {
+    setRecommendation(null);
+    form.reset();
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -31,118 +93,343 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#4927F5] to-[#6B46C1]" data-testid="section-hero">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6" data-testid="heading-hero">
-            Landing Page Services
+      <section className="py-16 px-6 bg-gradient-to-br from-[#4927F5] to-[#6B46C1]" data-testid="section-hero">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" data-testid="heading-hero">
+            Plantation Readiness Survey
           </h1>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto" data-testid="text-hero-description">
-            Professional landing page design and development for your precision agriculture solutions
+          <p className="text-xl text-purple-100" data-testid="text-hero-description">
+            Choosing Your Digital Solution
+          </p>
+          <p className="text-purple-100 mt-4 max-w-2xl mx-auto" data-testid="text-hero-subtitle">
+            This short survey helps us understand your operation so we can recommend the perfect service package (Comprehensive Monitoring or AI Yield Forecasting).
           </p>
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-20 px-6 bg-white" data-testid="section-overview">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="inline-block px-6 py-2 bg-[#D639D4]/10 text-[#D639D4] rounded-full text-sm font-medium mb-6" data-testid="badge-overview">
-              Our Approach
-            </span>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="heading-overview">
-              Strategic Landing Page Development
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto" data-testid="text-overview">
-              We create high-converting landing pages that effectively communicate your precision agriculture services to potential clients.
-            </p>
+      {/* Survey or Results Section */}
+      {!recommendation ? (
+        <section className="py-20 px-6 bg-gray-50" data-testid="section-survey">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-lg" data-testid="card-survey">
+              <CardContent className="p-8 md:p-12">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                    {/* Question A */}
+                    <div data-testid="question-estate-size">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                        1. Operation Scale & Immediate Goal
+                      </h3>
+                      <FormField
+                        control={form.control}
+                        name="estateSize"
+                        render={({ field }) => (
+                          <FormItem className="space-y-3">
+                            <FormLabel className="text-gray-700 font-semibold">
+                              A. What is the total size of the estate you wish to survey?
+                            </FormLabel>
+                            <FormControl>
+                              <RadioGroup
+                                onValueChange={field.onChange}
+                                value={field.value}
+                                className="space-y-2"
+                              >
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="less_than_500" data-testid="radio-estate-less-500" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Less than 500 Hectares
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="500_to_2000" data-testid="radio-estate-500-2000" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    500 – 2,000 Hectares
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="more_than_2000" data-testid="radio-estate-more-2000" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    More than 2,000 Hectares
+                                  </FormLabel>
+                                </FormItem>
+                              </RadioGroup>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    {/* Question B */}
+                    <div data-testid="question-primary-goal">
+                      <FormField
+                        control={form.control}
+                        name="primaryGoal"
+                        render={({ field }) => (
+                          <FormItem className="space-y-3">
+                            <FormLabel className="text-gray-700 font-semibold">
+                              B. What is your primary challenge or immediate goal? (Select one)
+                            </FormLabel>
+                            <FormControl>
+                              <RadioGroup
+                                onValueChange={field.onChange}
+                                value={field.value}
+                                className="space-y-2"
+                              >
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="accurate_maps" data-testid="radio-goal-maps" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Gaining accurate, up-to-date plantation maps and tree health data.
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="yield_forecasting" data-testid="radio-goal-yield" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Improving the precision of my Fresh Fruit Bunch (FFB) yield forecasts (trossen counting).
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="pest_detection" data-testid="radio-goal-pest" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Detecting early signs of pest, disease, and nutrient deficiencies.
+                                  </FormLabel>
+                                </FormItem>
+                              </RadioGroup>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    {/* Question C */}
+                    <div data-testid="question-yield-confidence">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                        2. Current Pain Point (Trossen Counting Focus)
+                      </h3>
+                      <FormField
+                        control={form.control}
+                        name="yieldConfidence"
+                        render={({ field }) => (
+                          <FormItem className="space-y-3">
+                            <FormLabel className="text-gray-700 font-semibold">
+                              C. How confident are you in the accuracy of your current method for forecasting FFB yield (bunch counting)?
+                            </FormLabel>
+                            <FormControl>
+                              <RadioGroup
+                                onValueChange={field.onChange}
+                                value={field.value}
+                                className="space-y-2"
+                              >
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="very_confident" data-testid="radio-confidence-very" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Very confident (We use modern methods and data is highly reliable).
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="moderately_confident" data-testid="radio-confidence-moderate" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Moderately confident (We use manual census, but results are often inconsistent).
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="low_confidence" data-testid="radio-confidence-low" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Low confidence (Manual census is slow, expensive, and we routinely miss 10%+ of potential yield).
+                                  </FormLabel>
+                                </FormItem>
+                              </RadioGroup>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    {/* Question D */}
+                    <div data-testid="question-critical-data">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                        3. Service Requirement Assessment
+                      </h3>
+                      <FormField
+                        control={form.control}
+                        name="criticalData"
+                        render={({ field }) => (
+                          <FormItem className="space-y-3">
+                            <FormLabel className="text-gray-700 font-semibold">
+                              D. Which of the following data points is the most critical for your next decision-making cycle? (Select one)
+                            </FormLabel>
+                            <FormControl>
+                              <RadioGroup
+                                onValueChange={field.onChange}
+                                value={field.value}
+                                className="space-y-2"
+                              >
+                                <FormItem className="flex items-start space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="spatial_data" data-testid="radio-data-spatial" className="mt-1" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Detailed spatial data: Weed detection, stand density, and high-resolution mapping. (Focuses on Comprehensive Monitoring)
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-start space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="yield_data" data-testid="radio-data-yield" className="mt-1" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Real-time yield data: Validated, tree-by-tree bunch and flower counts for harvesting and budget planning. (Focuses on AI Drone / Trossen Counting)
+                                  </FormLabel>
+                                </FormItem>
+                              </RadioGroup>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    {/* Question E */}
+                    <div data-testid="question-mature-stands">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                        4. Technical Environment
+                      </h3>
+                      <FormField
+                        control={form.control}
+                        name="matureStands"
+                        render={({ field }) => (
+                          <FormItem className="space-y-3">
+                            <FormLabel className="text-gray-700 font-semibold">
+                              E. Are your estates primarily composed of dense, mature palm stands (over 7 years old)?
+                            </FormLabel>
+                            <FormControl>
+                              <RadioGroup
+                                onValueChange={field.onChange}
+                                value={field.value}
+                                className="space-y-2"
+                              >
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="yes" data-testid="radio-mature-yes" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    Yes, the majority is dense/mature.
+                                  </FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-3 space-y-0">
+                                  <FormControl>
+                                    <RadioGroupItem value="no" data-testid="radio-mature-no" />
+                                  </FormControl>
+                                  <FormLabel className="font-normal cursor-pointer">
+                                    No, we have a mix of young and mature stand
+                                  </FormLabel>
+                                </FormItem>
+                              </RadioGroup>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <div className="pt-6">
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-[#4927F5] hover:bg-[#3818D4] text-white py-6 text-lg"
+                        data-testid="button-submit-survey"
+                      >
+                        Get My Recommendation <ArrowRight className="ml-2 w-5 h-5" />
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
           </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-6 bg-gray-50" data-testid="section-features">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" data-testid="heading-features">
-            Key Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-0 shadow-lg" data-testid="feature-card-1">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-[#4927F5]/10 flex items-center justify-center mb-4">
-                  <Rocket className="w-6 h-6 text-[#4927F5]" />
+        </section>
+      ) : (
+        <section className="py-20 px-6 bg-gray-50" data-testid="section-results">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-lg overflow-hidden" data-testid="card-results">
+              <div className={`py-8 px-6 ${
+                recommendation.service === "AI Drone Trossen Counting" 
+                  ? "bg-gradient-to-br from-[#FF7D04] to-[#E06D03]" 
+                  : "bg-gradient-to-br from-[#4927F5] to-[#6B46C1]"
+              }`}>
+                <div className="flex items-center justify-center mb-4">
+                  <CheckCircle2 className="w-16 h-16 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-1">
-                  Fast Loading
-                </h3>
-                <p className="text-gray-600" data-testid="feature-description-1">
-                  Optimized for speed to ensure quick load times and better user engagement.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg" data-testid="feature-card-2">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-[#FF7D04]/10 flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-[#FF7D04]" />
+                <h2 className="text-3xl font-bold text-white text-center">
+                  Your Recommended Solution
+                </h2>
+              </div>
+              <CardContent className="p-8 md:p-12">
+                <div className="text-center mb-8">
+                  <h3 className={`text-4xl font-bold mb-4 ${
+                    recommendation.service === "AI Drone Trossen Counting" 
+                      ? "text-[#FF7D04]" 
+                      : "text-[#4927F5]"
+                  }`} data-testid="text-recommended-service">
+                    {recommendation.service}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed" data-testid="text-recommendation-reason">
+                    {recommendation.reason}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-2">
-                  Conversion Focused
-                </h3>
-                <p className="text-gray-600" data-testid="feature-description-2">
-                  Designed with conversion optimization in mind to maximize lead generation.
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="border-0 shadow-lg" data-testid="feature-card-3">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-[#D639D4]/10 flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-[#D639D4]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-3">
-                  User-Centric
-                </h3>
-                <p className="text-gray-600" data-testid="feature-description-3">
-                  Intuitive design that provides excellent user experience across all devices.
-                </p>
-              </CardContent>
-            </Card>
+                {recommendation.upgradePath && (
+                  <div className="bg-purple-50 border-l-4 border-[#4927F5] p-6 mb-8" data-testid="upgrade-path">
+                    <h4 className="font-bold text-gray-900 mb-2">Future Upgrade Path:</h4>
+                    <p className="text-gray-600">{recommendation.upgradePath}</p>
+                  </div>
+                )}
 
-            <Card className="border-0 shadow-lg" data-testid="feature-card-4">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-[#4927F5]/10 flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-[#4927F5]" />
+                <div className="space-y-4">
+                  <Link href={recommendation.service === "AI Drone Trossen Counting" ? "/ai-drone-census" : "/comprehensive-monitoring"}>
+                    <Button 
+                      className={`w-full py-6 text-lg ${
+                        recommendation.service === "AI Drone Trossen Counting"
+                          ? "bg-[#FF7D04] hover:bg-[#E06D03]"
+                          : "bg-[#4927F5] hover:bg-[#3818D4]"
+                      } text-white`}
+                      data-testid="button-view-service"
+                    >
+                      View Service Details <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
+                  <Button 
+                    onClick={resetSurvey}
+                    variant="outline" 
+                    className="w-full py-6 text-lg border-gray-300 text-gray-700 hover:bg-gray-50"
+                    data-testid="button-retake-survey"
+                  >
+                    Retake Survey
+                  </Button>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid="feature-title-4">
-                  Data-Driven
-                </h3>
-                <p className="text-gray-600" data-testid="feature-description-4">
-                  Built with analytics integration to track performance and optimize results.
-                </p>
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-white" data-testid="section-cta">
-        <div className="max-w-7xl mx-auto">
-          <Card className="bg-[#4927F5] text-white p-12 text-center" data-testid="card-cta">
-            <CardContent>
-              <h2 className="text-4xl font-bold mb-4" data-testid="heading-cta">
-                Ready to Launch Your Landing Page?
-              </h2>
-              <p className="mb-8 text-purple-100 max-w-3xl mx-auto" data-testid="text-cta-description">
-                Contact us today to create a high-converting landing page for your precision agriculture services.
-              </p>
-              <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white px-8 py-6 text-lg" data-testid="button-get-started">
-                Get Started →
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Footer */}
       <footer className="bg-gray-100 py-12 px-6" data-testid="footer">
