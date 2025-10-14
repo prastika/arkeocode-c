@@ -193,11 +193,18 @@ export default function Cakravolo() {
                 <p className="text-gray-600 leading-relaxed mb-6" data-testid="workflow-description-5">
                   The processed and validated data is immediately visualized for the client. Real-time Dashboard allows users to track the status of the in-field bunch census and access the final yield forecast.
                 </p>
-                <Link href="/posi-system-demo">
-                  <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-system-demo">
-                    System Demo
-                  </Button>
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/posi-system-demo">
+                    <Button className="bg-[#4927F5] hover:bg-[#3818D4] text-white" data-testid="button-system-demo">
+                      System Demo
+                    </Button>
+                  </Link>
+                  <a href="https://drive.google.com/file/d/1KWjPRuMQXZFbqnCxNXa8SRoQ2kWoJkyc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-[#FF7D04] hover:bg-[#E06D03] text-white" data-testid="button-mobile-demo">
+                      Mobile App Demo
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
