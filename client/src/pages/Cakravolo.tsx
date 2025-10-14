@@ -233,7 +233,7 @@ export default function Cakravolo() {
               </div>
               
               <p className="text-gray-600 text-sm" data-testid="text-footer-description">
-                Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI.
+                Arkeocode is leading the future of Precision Agriculture by integrating high-speed UAV (Drone) capabilities with the analytical power of Computer Vision AI. We replace slow, risky manual surveys with autonomous census missions that identify and analyze every plant and potential yield indicator in real-time. Our data-driven service delivers 98% accurate information for precise yield forecasting, fertilizer optimization, and targeted pest intervention, empowering plantation managers to make smarter strategic decisions for maximum efficiency and profitability.
               </p>
             </div>
 
