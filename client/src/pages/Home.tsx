@@ -183,35 +183,37 @@ export default function Home() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {serviceMenuOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 z-50" data-testid="service-dropdown">
-                  <Link 
-                    href="/landing-page" 
-                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
-                    data-testid="submenu-landing-page"
-                  >
-                    Landing Page
-                  </Link>
-                  <Link 
-                    href="/comprehensive-monitoring" 
-                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
-                    data-testid="submenu-comprehensive-monitoring"
-                  >
-                    Comprehensive Monitoring
-                  </Link>
-                  <Link 
-                    href="/ai-drone-census" 
-                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
-                    data-testid="submenu-ai-drone-census"
-                  >
-                    AI Drone Census
-                  </Link>
-                  <Link 
-                    href="/agrivision-system" 
-                    className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
-                    data-testid="submenu-agrivision-system"
-                  >
-                    AgriVision System
-                  </Link>
+                <div className="absolute top-full left-0 pt-2 w-56 z-50" data-testid="service-dropdown">
+                  <div className="bg-white shadow-lg rounded-md py-2">
+                    <Link 
+                      href="/landing-page" 
+                      className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                      data-testid="submenu-landing-page"
+                    >
+                      Landing Page
+                    </Link>
+                    <Link 
+                      href="/comprehensive-monitoring" 
+                      className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                      data-testid="submenu-comprehensive-monitoring"
+                    >
+                      Comprehensive Monitoring
+                    </Link>
+                    <Link 
+                      href="/ai-drone-census" 
+                      className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                      data-testid="submenu-ai-drone-census"
+                    >
+                      AI Drone Census
+                    </Link>
+                    <Link 
+                      href="/agrivision-system" 
+                      className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
+                      data-testid="submenu-agrivision-system"
+                    >
+                      AgriVision System
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
