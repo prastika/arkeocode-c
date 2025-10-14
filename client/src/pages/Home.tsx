@@ -184,34 +184,34 @@ export default function Home() {
               </button>
               {serviceMenuOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 z-50" data-testid="service-dropdown">
-                  <a 
-                    href="#home" 
+                  <Link 
+                    href="/landing-page" 
                     className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
                     data-testid="submenu-landing-page"
                   >
                     Landing Page
-                  </a>
-                  <a 
-                    href="#service" 
+                  </Link>
+                  <Link 
+                    href="/comprehensive-monitoring" 
                     className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
                     data-testid="submenu-comprehensive-monitoring"
                   >
                     Comprehensive Monitoring
-                  </a>
-                  <a 
-                    href="#service" 
+                  </Link>
+                  <Link 
+                    href="/ai-drone-census" 
                     className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
                     data-testid="submenu-ai-drone-census"
                   >
                     AI Drone Census
-                  </a>
-                  <a 
-                    href="#service" 
+                  </Link>
+                  <Link 
+                    href="/agrivision-system" 
                     className="block px-4 py-2 text-gray-800 hover:bg-[#4927F5] hover:text-white transition-colors"
                     data-testid="submenu-agrivision-system"
                   >
                     AgriVision System
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
